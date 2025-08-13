@@ -42,5 +42,6 @@ form?.addEventListener('submit', e => {
   statusEl.textContent = `Gracias, ${nombre || '—'}. Hemos recibido su mensaje.`;
   form.reset();
 });
-﻿// Pega aquí el mismo script.js del bloque de macOS/Linux
+
+
 
