@@ -1,0 +1,12 @@
+﻿{
+  "name": "Paragon Chile",
+  "short_name": "Paragon",
+  "start_url": "/paragon-chile/",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#37497B",
+  "icons": [
+    { "src": "assets/android-chrome-192x192.png", "sizes": "192x192", "type": "image/png" },
+    { "src": "assets/android-chrome-512x512.png", "sizes": "512x512", "type": "image/png" }
+  ]
+}
