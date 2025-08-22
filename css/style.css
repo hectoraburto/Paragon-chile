@@ -1,32 +1,184 @@
-:root{--blue:#37497B;--radius:12px}
-body{margin:0;font-family:Inter,Nobile,sans-serif}
-.container{max-width:1140px;margin:auto;padding:1rem}
-.site-header{position:sticky;top:0;background:#fff;padding:.5rem 1rem;box-shadow:0 2px 4px rgba(0,0,0,.1)}
-.hero-slider{position:relative;overflow:hidden;height:90vh;color:#fff}
-.slides{display:flex;transition:transform 1s ease;width:400%}
-.slide{flex:1 0 100%;height:90vh;position:relative}
-.slide img,.slide video{width:100%;height:100%;object-fit:cover}
-.hero-content{position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);text-align:center}
-.hero-content h1{font-size:2.5rem;text-shadow:0 2px 4px rgba(0,0,0,.6)}
-.btn{background:var(--blue);color:#fff;padding:.7rem 1.2rem;border-radius:var(--radius);text-decoration:none}
-.prev,.next{position:absolute;top:50%;transform:translateY(-50%);background:rgba(0,0,0,.3);border:none;color:#fff;font-size:2rem;padding:.5rem;cursor:pointer}
-.prev{left:10px}.next{right:10px}
-.section{padding:2rem 0}
-.contact-form{display:flex;flex-direction:column;gap:.7rem}
-.contact-form input,.contact-form textarea{padding:.6rem;border:1px solid #ccc;border-radius:var(--radius)}
-.site-footer{background:var(--blue);color:#fff;text-align:center;padding:1rem}
-/* logos carousel */
-.logos-carousel{display:flex;gap:3rem;overflow:hidden;animation:scroll 20s linear infinite}
-.logos-carousel img{height:60px;filter:grayscale(1);transition:.3s}
-.logos-carousel img:hover{filter:none}
-@keyframes scroll{0%{transform:translateX(0)}100%{transform:translateX(-50%)}}
+/* paragon-chile/css/style.css */
 
-
-/* Footer con logo + texto */
-.site-footer{background:#37497B;color:#fff}
-.footer-bar{display:flex;align-items:center;justify-content:space-between;gap:1rem;padding:1rem 0}
-.footer-left img{display:block;filter:brightness(100%)}
-.footer-right small{opacity:.95}
-@media (max-width:700px){
-  .footer-bar{flex-direction:column;text-align:center}
+/* Variables CSS con colores corporativos */
+:root {
+    --paragon-blue: #37497B;
+    --paragon-dark-blue: #2A3B5E;
+    --paragon-light-blue: #6B88B2;
+    --gray-text: #4A4A4A;
+    --gray-bg: #F8F8F8;
+    --white: #FFFFFF;
 }
+
+/* Base styles and typography */
+body {
+    font-family: 'Inter', sans-serif;
+    color: var(--gray-text);
+    line-height: 1.6;
+    margin-top: 64px; /* Para compensar la barra de navegación fija */
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Nobile', sans-serif;
+    color: var(--paragon-dark-blue);
+    margin-bottom: 1rem;
+}
+
+.container {
+    max-width: 1200px;
+}
+
+/* Global button styles */
+.btn-primary {
+    @apply inline-block px-8 py-3 bg-paragon-blue text-white font-semibold rounded-full shadow-lg
+           hover:bg-paragon-light-blue transition-all duration-300 transform hover:scale-105;
+}
+
+/* Hero Slider specific styles */
+#hero-slider {
+    position: relative;
+}
+
+.hero-slide {
+    width: 100%;
+    height: 100vh; /* Ocupa toda la altura de la ventana */
+    position: absolute;
+    top: 0;
+    left: 0;
+    transition: opacity 1s ease-in-out;
+}
+
+.hero-slide.active {
+    opacity: 1;
+    z-index: 10;
+    display: flex; /* Asegura que la diapositiva activa se muestre correctamente */
+}
+
+.hero-slide video, .hero-slide img {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    top: 0;
+    left: 0;
+}
+
+.hero-slide .overlay {
+    position: absolute;
+    inset: 0;
+    background-color: rgba(0, 0, 0, 0.5); /* Overlay oscuro para legibilidad */
+}
+
+/* Service Cards */
+.service-card {
+    @apply bg-white p-8 rounded-lg shadow-xl border border-gray-200
+           hover:shadow-2xl hover:border-paragon-blue transition-all duration-300 transform hover:-translate-y-1;
+}
+
+/* Client Carousel specific styles */
+.client-carousel-container {
+    position: relative;
+}
+
+.client-carousel {
+    display: flex;
+    white-space: nowrap;
+    animation: carousel-scroll 30s linear infinite; /* Animación de scroll */
+}
+
+.client-logo-wrapper {
+    margin: 0 1rem; /* Espacio entre logos */
+}
+
+.client-logo {
+    max-width: 100%;
+    height: auto;
+    object-fit: contain;
+}
+
+/* Pausar animación al pasar el ratón */
+.client-carousel-container:hover .client-carousel {
+    animation-play-state: paused;
+}
+
+/* Keyframes para la animación del carrusel */
+@keyframes carousel-scroll {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(-50%); /* Para un scroll infinito */
+    }
+}
+
+
+/* Formulario de Contacto */
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+textarea {
+    @apply border border-gray-300 rounded-md p-3 focus:outline-none focus:ring-2 focus:ring-paragon-blue;
+}
+
+/* Footer specific styles */
+footer {
+    background-color: var(--paragon-dark-blue);
+}
+
+/* Responsive design (Media Queries) */
+@media (max-width: 768px) {
+    body {
+        font-size: 16px;
+    }
+
+    header {
+        padding-top: 1rem;
+        padding-bottom: 1rem;
+    }
+
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+        margin-top: 1rem;
+    }
+
+    nav ul li {
+        margin-bottom: 0.5rem;
+    }
+
+    .hero-slide h1 {
+        font-size: 3rem;
+    }
+
+    .hero-slide p {
+        font-size: 1.5rem;
+    }
+
+    .grid-cols-1, .md\:grid-cols-2 {
+        grid-template-columns: 1fr;
+    }
+
+    .client-logo-wrapper {
+        width: 120px; /* Ajuste para pantallas más pequeñas */
+        height: 60px;
+    }
+
+    footer {
+        flex-direction: column;
+    }
+
+    footer img {
+        margin-bottom: 1rem;
+    }
+}
+
+/* Custom Tailwind classes for colors */
+.bg-paragon-blue { background-color: var(--paragon-blue); }
+.text-paragon-blue { color: var(--paragon-blue); }
+.hover\:text-paragon-light-blue:hover { color: var(--paragon-light-blue); }
+.bg-paragon-dark-blue { background-color: var(--paragon-dark-blue); }
+.text-paragon-dark-blue { color: var(--paragon-dark-blue); }
+.focus\:ring-paragon-blue:focus { --tw-ring-color: var(--paragon-blue); }
+.border-paragon-blue { border-color: var(--paragon-blue); }
+.font-nobile { font-family: 'Nobile', sans-serif; }
+.font-inter { font-family: 'Inter', sans-serif; }
