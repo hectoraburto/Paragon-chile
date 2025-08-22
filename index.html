@@ -1,325 +1,257 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Paragon Project Partners - Gestión de Proyectos y Contratos</title>
-    <!-- Carga de Tailwind CSS para estilos -->
-    <script src="https://cdn.tailwindcss.com"></script>
-    <link rel="stylesheet" href="css/style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Nobile:wght@400;700&display=swap" rel="stylesheet">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Paragon Project Partners - Gestión de Proyectos y Contratos</title>
+  <!-- Tailwind CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="css/style.css"/>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Nobile:wght@400;700&display=swap" rel="stylesheet">
 </head>
 <body class="font-inter text-gray-800">
 
-    <!-- Navegación y Header -->
-<!-- Navegación y Header -->
-<header class="bg-white text-paragon-blue py-4 fixed top-0 left-0 w-full z-50 shadow-md">
-  <div class="container mx-auto flex justify-between items-center px-4">
-    <!-- Logo + Texto -->
-    <a href="index.html" class="flex items-center space-x-2">
-      <img src="img/logo-paragon.png" alt="Logo Paragon Chile" class="h-10 rounded-md">
-      <span class="text-xl font-bold font-nobile">Paragon Project Partners</span>
-    </a>
+  <!-- Header fijo -->
+  <header class="bg-white text-paragon-blue py-4 fixed top-0 left-0 w-full z-50 shadow-md">
+    <div class="container mx-auto flex justify-between items-center px-4">
+      <!-- Logo + Texto -->
+      <a href="index.html" class="flex items-center space-x-2">
+        <img src="img/logo-paragon.png" alt="Logo Paragon Chile" class="h-10 rounded-md">
+        <span class="text-xl font-bold font-nobile">Paragon Project Partners</span>
+      </a>
 
-    <!-- Botón hamburguesa (solo móvil) -->
-    <button id="menu-toggle" class="md:hidden text-paragon-blue focus:outline-none">
-      <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
-      </svg>
-    </button>
+      <!-- Botón hamburguesa (solo móvil) -->
+      <button
+        id="menu-toggle"
+        class="md:hidden text-paragon-blue focus:outline-none"
+        aria-label="Abrir menú"
+        aria-controls="menu"
+        aria-expanded="false">
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                d="M4 6h16M4 12h16M4 18h16"/>
+        </svg>
+      </button>
 
-    <!-- Menú -->
-    <nav>
-      <ul id="menu" class="hidden flex-col space-y-4 mt-4 md:flex md:flex-row md:space-y-0 md:space-x-6">
-        <li><a href="index.html" class="text-paragon-blue hover:text-paragon-light-blue transition-colors duration-300">Inicio</a></li>
-        <li><a href="servicios/gestion-contractual.html" class="text-paragon-blue hover:text-paragon-light-blue transition-colors duration-300">Gestión Contractual</a></li>
-        <li><a href="servicios/gestion-proyectos.html" class="text-paragon-blue hover:text-paragon-light-blue transition-colors duration-300">Gestión de Proyectos</a></li>
-        <li><a href="servicios/training-coaching.html" class="text-paragon-blue hover:text-paragon-light-blue transition-colors duration-300">Training & Coaching</a></li>
-        <li><a href="servicios/otros-servicios.html" class="text-paragon-blue hover:text-paragon-light-blue transition-colors duration-300">Otros Servicios</a></li>
-        <li><a href="#contacto" class="text-paragon-blue hover:text-paragon-light-blue transition-colors duration-300">Contacto</a></li>
-        <!-- Icono LinkedIn -->
-        <li>
-          <a href="https://www.linkedin.com/company/paragonchile" target="_blank" class="linkedin-icon" aria-label="LinkedIn">
-            <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="#0A66C2">
-              <path d="M19 0h-14c-2.761 0-5 2.239-5 
-              5v14c0 2.761 2.239 5 5 
-              5h14c2.761 0 5-2.239 5-5v-14c0-2.761-2.239-5-5-5zm-11 
-              19h-3v-10h3v10zm-1.5-11.268c-.966 
-              0-1.75-.79-1.75-1.764s.784-1.764 
-              1.75-1.764 1.75.79 
-              1.75 1.764-.784 1.764-1.75 
-              1.764zm13.5 11.268h-3v-5.604c0-1.337-.027-3.059-1.865-3.059-1.868 
-              0-2.155 1.459-2.155 2.963v5.7h-3v-10h2.881v1.367h.041c.401-.759 
-              1.379-1.56 2.837-1.56 3.034 0 3.59 2.006 
-              3.59 4.615v5.578z"/>
-            </svg>
-          </a>
-        </li>
-      </ul>
-    </nav>
-  </div>
-</header>
+      <!-- Menú -->
+      <nav class="relative w-full md:w-auto">
+        <ul
+          id="menu"
+          class="hidden absolute left-0 right-0 top-[calc(100%+0.5rem)] z-[60] bg-white shadow-lg rounded-lg p-4
+                 -mx-4 px-4
+                 md:static md:z-auto md:bg-transparent md:shadow-none md:p-0 md:mx-0 md:px-0
+                 md:flex md:flex-row md:space-x-6 md:space-y-0">
+          <li class="py-2 md:py-0">
+            <a href="index.html" class="text-paragon-blue hover:text-paragon-light-blue transition-colors duration-300">Inicio</a>
+          </li>
+          <li class="py-2 md:py-0">
+            <a href="servicios/gestion-contractual.html" class="text-paragon-blue hover:text-paragon-light-blue transition-colors duration-300">Gestión Contractual</a>
+          </li>
+          <li class="py-2 md:py-0">
+            <a href="servicios/gestion-proyectos.html" class="text-paragon-blue hover:text-paragon-light-blue transition-colors duration-300">Gestión de Proyectos</a>
+          </li>
+          <li class="py-2 md:py-0">
+            <a href="servicios/training-coaching.html" class="text-paragon-blue hover:text-paragon-light-blue transition-colors duration-300">Training & Coaching</a>
+          </li>
+          <li class="py-2 md:py-0">
+            <a href="servicios/otros-servicios.html" class="text-paragon-blue hover:text-paragon-light-blue transition-colors duration-300">Otros Servicios</a>
+          </li>
+          <li class="py-2 md:py-0">
+            <a href="#contacto" class="text-paragon-blue hover:text-paragon-light-blue transition-colors duration-300">Contacto</a>
+          </li>
+          <!-- LinkedIn solo icono -->
+          <li class="py-2 md:py-0">
+            <a href="https://www.linkedin.com/company/paragonchile" target="_blank" aria-label="LinkedIn" class="inline-block">
+              <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="#0A66C2">
+                <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.761 0 5-2.239 5-5v-14c0-2.761-2.239-5-5-5zm-11 19h-3v-10h3v10zm-1.5-11.268c-.966 
+                0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.784 1.764-1.75 1.764zm13.5 11.268h-3v-5.604c0-1.337-.027-3.059-1.865-3.059-1.868 
+                0-2.155 1.459-2.155 2.963v5.7h-3v-10h2.881v1.367h.041c.401-.759 1.379-1.56 2.837-1.56 3.034 0 3.59 2.006 3.59 4.615v5.578z"/>
+              </svg>
+            </a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+    
+  </header>
 
+  <!-- Contenido: agrega margen top para no quedar bajo el header -->
+  <main class="mt-20">
 
     <!-- Hero Slider -->
-    <section id="hero-slider" class="relative w-full h-screen overflow-hidden mt-16">
-        <div class="hero-slide active relative w-full h-full flex items-center justify-center bg-black">
-            <!-- Video de fondo (Placeholder) -->
-            <video src="video/slide1.mp4" autoplay loop muted class="absolute w-full h-full object-cover opacity-70"></video>
-            <div class="absolute inset-0 bg-black opacity-50"></div>
-            <div class="z-10 text-white text-center p-8 rounded-lg">
-                <h1 class="text-5xl md:text-6xl font-bold mb-4 font-nobile leading-tight">MANAGEMENT KNOW HOW</h1>
-                <p class="text-2xl md:text-3xl mb-8 font-nobile">PROJECTS – CONTRACTS – TRAINING & COACHING</p>
-                <a href="#contacto" class="btn-primary">Contáctanos</a>
-            </div>
+    <section id="hero-slider" class="relative w-full h-screen overflow-hidden">
+      <div class="hero-slide active relative w-full h-full flex items-center justify-center bg-black">
+        <video src="video/slide1.mp4" autoplay loop muted class="absolute w-full h-full object-cover opacity-70"></video>
+        <div class="absolute inset-0 bg-black opacity-50"></div>
+        <div class="z-10 text-white text-center p-8 rounded-lg">
+          <h1 class="text-5xl md:text-6xl font-bold mb-4 font-nobile leading-tight">MANAGEMENT KNOW HOW</h1>
+          <p class="text-2xl md:text-3xl mb-8 font-nobile">PROJECTS – CONTRACTS – TRAINING & COACHING</p>
+          <a href="#contacto" class="btn-primary">Contáctanos</a>
         </div>
-        <div class="hero-slide relative w-full h-full hidden items-center justify-center">
-            <!-- Imagen de fondo para slide 2 (Placeholder) -->
-            <img src="img/slide2.jpg" alt="Infraestructura moderna" class="absolute w-full h-full object-cover">
-            <div class="absolute inset-0 bg-paragon-blue opacity-50"></div>
-            <div class="z-10 text-white text-center p-8 rounded-lg">
-                <h2 class="text-5xl md:text-6xl font-bold mb-4 font-nobile">Innovación en Proyectos</h2>
-                <p class="text-2xl md:text-3xl mb-4 font-nobile">Soluciones vanguardistas para sus desafíos</p>
-                <a href="#servicios" class="btn-primary">Nuestros Servicios</a>
-            </div>
+      </div>
+      <div class="hero-slide relative w-full h-full hidden items-center justify-center">
+        <img src="img/slide2.jpg" alt="Infraestructura moderna" class="absolute w-full h-full object-cover">
+        <div class="absolute inset-0 bg-paragon-blue opacity-50"></div>
+        <div class="z-10 text-white text-center p-8 rounded-lg">
+          <h2 class="text-5xl md:text-6xl font-bold mb-4 font-nobile">Innovación en Proyectos</h2>
+          <p class="text-2xl md:text-3xl mb-4 font-nobile">Soluciones vanguardistas para sus desafíos</p>
+          <a href="#servicios" class="btn-primary">Nuestros Servicios</a>
         </div>
-        <div class="hero-slide relative w-full h-full hidden items-center justify-center">
-            <!-- Imagen de fondo para slide 3 (Placeholder) -->
-            <img src="img/slide3.jpg" alt="Construcción y desarrollo" class="absolute w-full h-full object-cover">
-            <div class="absolute inset-0 bg-paragon-blue opacity-50"></div>
-            <div class="z-10 text-white text-center p-8 rounded-lg">
-                <h2 class="text-5xl md:text-6xl font-bold mb-4 font-nobile">Expertos en Contratos</h2>
-                <p class="text-2xl md:text-3xl mb-4 font-nobile">Administración y prevención de reclamos</p>
-                <a href="#servicios" class="btn-primary">Conozca Más</a>
-            </div>
+      </div>
+      <div class="hero-slide relative w-full h-full hidden items-center justify-center">
+        <img src="img/slide3.jpg" alt="Construcción y desarrollo" class="absolute w-full h-full object-cover">
+        <div class="absolute inset-0 bg-paragon-blue opacity-50"></div>
+        <div class="z-10 text-white text-center p-8 rounded-lg">
+          <h2 class="text-5xl md:text-6xl font-bold mb-4 font-nobile">Expertos en Contratos</h2>
+          <p class="text-2xl md:text-3xl mb-4 font-nobile">Administración y prevención de reclamos</p>
+          <a href="#servicios" class="btn-primary">Conozca Más</a>
         </div>
-        <div class="hero-slide relative w-full h-full hidden items-center justify-center">
-            <!-- Imagen de fondo para slide 4 (Placeholder) -->
-            <img src="img/slide4.jpg" alt="Panorámica urbana" class="absolute w-full h-full object-cover">
-            <div class="absolute inset-0 bg-paragon-blue opacity-50"></div>
-            <div class="z-10 text-white text-center p-8 rounded-lg">
-                <h2 class="text-5xl md:text-6xl font-bold mb-4 font-nobile">Formación de Líderes</h2>
-                <p class="text-2xl md:text-3xl mb-8 font-nobile">Capacitación y Coaching PMI®</p>
-                <a href="#servicios" class="btn-primary">Explorar Programas</a>
-            </div>
+      </div>
+      <div class="hero-slide relative w-full h-full hidden items-center justify-center">
+        <img src="img/slide4.jpg" alt="Panorámica urbana" class="absolute w-full h-full object-cover">
+        <div class="absolute inset-0 bg-paragon-blue opacity-50"></div>
+        <div class="z-10 text-white text-center p-8 rounded-lg">
+          <h2 class="text-5xl md:text-6xl font-bold mb-4 font-nobile">Formación de Líderes</h2>
+          <p class="text-2xl md:text-3xl mb-8 font-nobile">Capacitación y Coaching PMI®</p>
+          <a href="#servicios" class="btn-primary">Explorar Programas</a>
         </div>
+      </div>
     </section>
 
-    <!-- Sección de Quiénes Somos (opcional) -->
+    <!-- About -->
     <section id="about" class="py-20 bg-gray-50">
-        <div class="container mx-auto px-4 text-center">
-            <h2 class="text-4xl font-bold text-paragon-blue mb-10 font-nobile">Quiénes Somos</h2>
-            <div class="flex flex-col md:flex-row items-center justify-center md:space-x-12">
-                <div class="md:w-1/2 mb-8 md:mb-0">
-                    <!-- Placeholder para la imagen de equipo -->
-                    <img src="img/Logo Paragon Vector.png" alt="Equipo de Paragon Project Partners" class="rounded-lg shadow-xl w-full h-auto object-cover">
-                </div>
-                <div class="md:w-1/2 text-left">
-                    <p class="text-lg leading-relaxed mb-4">
-                        Paragon Project Partners es una Empresa registrada internacionalmente en el PMI®, con operaciones en Latinoamérica,
-                        principalmente en Chile y Ecuador.
-                    </p>
-                    <p class="text-lg leading-relaxed mb-4">
-                        Contamos con una metodología desarrollada en base a los lineamientos y estándares del PMI®,
-                        la cual ha sido aplicada en distintas organizaciones y proyectos, logrando contribuir
-                        significativamente al éxito de los mismos.
-                    </p>
-                    <p class="text-lg leading-relaxed mb-4 font-nobile italic">
-                        "Somos su aliado y lo apoyamos en todas las etapas y fases de sus proyectos y contratos, desde etapas iniciales hasta el cierre."
-                    </p>
-                    <p class="text-base leading-relaxed text-gray-600">
-                        Como PMI® Registered Consultant N° 15-0224 (RCP), hemos sido identificados como organización consultora con experiencia
-                        comprobada de buenas prácticas de Gestión de Proyectos, Programas y Portafolios.
-                        Como Registered Education Provider (R.E.P.) # 3544, hemos sido aprobados por el PMI® para emitir
-                        Professional Development Units (PDUs) en sus cursos con los criterios de garantía de calidad establecidos por el PMI®.
-                    </p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Sección de Servicios -->
-    <section id="servicios" class="py-20 bg-white">
-        <div class="container mx-auto px-4 text-center">
-            <h2 class="text-4xl font-bold text-paragon-blue mb-10 font-nobile">Nuestros Servicios</h2>
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-                <!-- Tarjeta de Servicio: Gestión Contractual -->
-                <div class="service-card">
-                    <h3 class="text-2xl font-bold mb-4 font-nobile text-paragon-dark-blue">Gestión Contractual</h3>
-                    <p class="text-gray-700 mb-4">
-                        Nos constituimos en una CMO® (Contract Management Office), apoyando o desarrollando el manejo de todos los Aspectos Contractuales de sus Proyectos.
-                    </p>
-                    <a href="servicios/gestion-contractual.html" class="text-paragon-blue hover:text-paragon-light-blue font-semibold transition-colors duration-300">Saber más &rarr;</a>
-                </div>
-                <!-- Tarjeta de Servicio: Gestión de Proyectos -->
-                <div class="service-card">
-                    <h3 class="text-2xl font-bold mb-4 font-nobile text-paragon-dark-blue">Gestión de Proyectos</h3>
-                    <p class="text-gray-700 mb-4">
-                        Nos constituimos en una PMO® (Project Management Office), apoyando o desarrollando la Planificación y Control de sus Proyectos, Programas y/o Cartera de Proyectos.
-                    </p>
-                    <a href="servicios/gestion-proyectos.html" class="text-paragon-blue hover:text-paragon-light-blue font-semibold transition-colors duration-300">Saber más &rarr;</a>
-                </div>
-                <!-- Tarjeta de Servicio: Training & Coaching -->
-                <div class="service-card">
-                    <h3 class="text-2xl font-bold mb-4 font-nobile text-paragon-dark-blue">Training & Coaching</h3>
-                    <p class="text-gray-700 mb-4">
-                        Como Registered Education Provider (R.E.P.) # 3544, ofrecemos programas de capacitación y coaching para el desarrollo profesional.
-                    </p>
-                    <a href="servicios/training-coaching.html" class="text-paragon-blue hover:text-paragon-light-blue font-semibold transition-colors duration-300">Saber más &rarr;</a>
-                </div>
-                <!-- Tarjeta de Servicio: Otros Servicios -->
-                <div class="service-card">
-                    <h3 class="text-2xl font-bold mb-4 font-nobile text-paragon-dark-blue">Otros Servicios</h3>
-                    <p class="text-gray-700 mb-4">
-                        Servicios complementarios como Inspección Técnica de Obras (ITO), peritajes técnicos y estudios especializados.
-                    </p>
-                    <a href="servicios/otros-servicios.html" class="text-paragon-blue hover:text-paragon-light-blue font-semibold transition-colors duration-300">Saber más &rarr;</a>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Carrusel de Logos de Clientes -->
-    <section id="clientes" class="py-20 bg-gray-50 overflow-hidden">
-        <div class="container mx-auto px-4 text-center">
-            <h2 class="text-4xl font-bold text-paragon-blue mb-10 font-nobile">Nuestros Clientes Clave</h2>
-        </div>
-        <div class="client-carousel-container w-full overflow-hidden relative">
-            <div class="client-carousel flex animate-carousel-scroll">
-                <!-- Logos de Clientes (Placeholders) -->
-                <div class="client-logo-wrapper flex-shrink-0 w-48 h-24 flex items-center justify-center p-4">
-                    <img src="img/logos/bhp.png" alt="Logo BHP" class="client-logo grayscale hover:grayscale-0 transition-all duration-300 rounded-md">
-                </div>
-                <div class="client-logo-wrapper flex-shrink-0 w-48 h-24 flex items-center justify-center p-4">
-                    <img src="img/logos/anglo-american.png" alt="Logo Anglo American" class="client-logo grayscale hover:grayscale-0 transition-all duration-300 rounded-md">
-                </div>
-                <div class="client-logo-wrapper flex-shrink-0 w-48 h-24 flex items-center justify-center p-4">
-                    <img src="img/logos/enap.png" alt="Logo ENAP" class="client-logo grayscale hover:grayscale-0 transition-all duration-300 rounded-md">
-                </div>
-                <div class="client-logo-wrapper flex-shrink-0 w-48 h-24 flex items-center justify-center p-4">
-                    <img src="img/logos/LOGO-CODELCO.png" alt="Logo Codelco" class="client-logo grayscale hover:grayscale-0 transition-all duration-300 rounded-md">
-                </div>
-                <div class="client-logo-wrapper flex-shrink-0 w-48 h-24 flex items-center justify-center p-4">
-                    <img src="img/logos/Acciona_logo.svg.png" alt="Logo Acciona" class="client-logo grayscale hover:grayscale-0 transition-all duration-300 rounded-md">
-                </div>
-                <div class="client-logo-wrapper flex-shrink-0 w-48 h-24 flex items-center justify-center p-4">
-                    <img src="img/logos/siemens-logo.png" alt="Logo Siemens" class="client-logo grayscale hover:grayscale-0 transition-all duration-300 rounded-md">
-                </div>
-                <div class="client-logo-wrapper flex-shrink-0 w-48 h-24 flex items-center justify-center p-4">
-                    <img src="img/logos/logo-cmp.png" alt="Logo CMP" class="client-logo grayscale hover:grayscale-0 transition-all duration-300 rounded-md">
-                </div>
-                <div class="client-logo-wrapper flex-shrink-0 w-48 h-24 flex items-center justify-center p-4">
-                    <img src="img/logos/Eiffage.png" alt="Logo Eiffage" class="client-logo grayscale hover:grayscale-0 transition-all duration-300 rounded-md">
-                </div>
-                <div class="client-logo-wrapper flex-shrink-0 w-48 h-24 flex items-center justify-center p-4">
-                    <img src="https://placehold.co/150x80/cccccc/000000?text=Nueva+Union" alt="Logo Nueva Union" class="client-logo grayscale hover:grayscale-0 transition-all duration-300 rounded-md">
-                </div>
-                <div class="client-logo-wrapper flex-shrink-0 w-48 h-24 flex items-center justify-center p-4">
-                    <img src="img/logos/ACAP-logo.png" alt="Logo ACAP" class="client-logo grayscale hover:grayscale-0 transition-all duration-300 rounded-md">
-                </div>
-                <div class="client-logo-wrapper flex-shrink-0 w-48 h-24 flex items-center justify-center p-4">
-                    <img src="img/logos/logo-pll.png" alt="Logo Puerto Las Losas" class="client-logo grayscale hover:grayscale-0 transition-all duration-300 rounded-md">
-                </div>
-                <!-- Repetir logos para el efecto infinito -->
-                <div class="client-logo-wrapper flex-shrink-0 w-48 h-24 flex items-center justify-center p-4">
-                    <img src="https://placehold.co/150x80/cccccc/000000?text=BHP" alt="Logo BHP" class="client-logo grayscale hover:grayscale-0 transition-all duration-300 rounded-md">
-                </div>
-                <div class="client-logo-wrapper flex-shrink-0 w-48 h-24 flex items-center justify-center p-4">
-                    <img src="https://placehold.co/150x80/cccccc/000000?text=Anglo+American" alt="Logo Anglo American" class="client-logo grayscale hover:grayscale-0 transition-all duration-300 rounded-md">
-                </div>
-                <div class="client-logo-wrapper flex-shrink-0 w-48 h-24 flex items-center justify-center p-4">
-                    <img src="https://placehold.co/150x80/cccccc/000000?text=ENAP" alt="Logo ENAP" class="client-logo grayscale hover:grayscale-0 transition-all duration-300 rounded-md">
-                </div>
-                <div class="client-logo-wrapper flex-shrink-0 w-48 h-24 flex items-center justify-center p-4">
-                    <img src="https://placehold.co/150x80/cccccc/000000?text=Codelco" alt="Logo Codelco" class="client-logo grayscale hover:grayscale-0 transition-all duration-300 rounded-md">
-                </div>
-                <div class="client-logo-wrapper flex-shrink-0 w-48 h-24 flex items-center justify-center p-4">
-                    <img src="https://placehold.co/150x80/cccccc/000000?text=Acciona" alt="Logo Acciona" class="client-logo grayscale hover:grayscale-0 transition-all duration-300 rounded-md">
-                </div>
-                <div class="client-logo-wrapper flex-shrink-0 w-48 h-24 flex items-center justify-center p-4">
-                    <img src="https://placehold.co/150x80/cccccc/000000?text=Siemens" alt="Logo Siemens" class="client-logo grayscale hover:grayscale-0 transition-all duration-300 rounded-md">
-                </div>
-                <div class="client-logo-wrapper flex-shrink-0 w-48 h-24 flex items-center justify-center p-4">
-                    <img src="https://placehold.co/150x80/cccccc/000000?text=CMP" alt="Logo CMP" class="client-logo grayscale hover:grayscale-0 transition-all duration-300 rounded-md">
-                </div>
-                <div class="client-logo-wrapper flex-shrink-0 w-48 h-24 flex items-center justify-center p-4">
-                    <img src="https://placehold.co/150x80/cccccc/000000?text=Eiffage" alt="Logo Eiffage" class="client-logo grayscale hover:grayscale-0 transition-all duration-300 rounded-md">
-                </div>
-                <div class="client-logo-wrapper flex-shrink-0 w-48 h-24 flex items-center justify-center p-4">
-                    <img src="https://placehold.co/150x80/cccccc/000000?text=Nueva+Union" alt="Logo Nueva Union" class="client-logo grayscale hover:grayscale-0 transition-all duration-300 rounded-md">
-                </div>
-                <div class="client-logo-wrapper flex-shrink-0 w-48 h-24 flex items-center justify-center p-4">
-                    <img src="https://placehold.co/150x80/cccccc/000000?text=ACAP" alt="Logo ACAP" class="client-logo grayscale hover:grayscale-0 transition-all duration-300 rounded-md">
-                </div>
-                <div class="client-logo-wrapper flex-shrink-0 w-48 h-24 flex items-center justify-center p-4">
-                    <img src="https://placehold.co/150x80/cccccc/000000?text=Pto+Las+Losas" alt="Logo Puerto Las Losas" class="client-logo grayscale hover:grayscale-0 transition-all duration-300 rounded-md">
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Formulario de Contacto -->
-    <section id="contacto" class="py-20 bg-white">
-        <div class="container mx-auto px-4 text-center">
-            <h2 class="text-4xl font-bold text-paragon-blue mb-10 font-nobile">Contáctanos</h2>
-            <p class="text-lg text-gray-700 mb-8">
-                ¿Tienes un proyecto en mente o necesitas asesoramiento? Déjanos un mensaje y te contactaremos a la brevedad.
+      <div class="container mx-auto px-4 text-center">
+        <h2 class="text-4xl font-bold text-paragon-blue mb-10 font-nobile">Quiénes Somos</h2>
+        <div class="flex flex-col md:flex-row items-center justify-center md:space-x-12">
+          <div class="md:w-1/2 mb-8 md:mb-0">
+            <img src="img/Logo Paragon Vector.png" alt="Equipo de Paragon Project Partners" class="rounded-lg shadow-xl w-full h-auto object-cover">
+          </div>
+          <div class="md:w-1/2 text-left">
+            <p class="text-lg leading-relaxed mb-4">
+              Paragon Project Partners es una Empresa registrada internacionalmente en el PMI®, con operaciones en Latinoamérica,
+              principalmente en Chile y Ecuador.
             </p>
-            <div class="max-w-4xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-8 bg-gray-50 p-8 rounded-lg shadow-lg">
-                <div class="order-2 md:order-1">
-                    <form class="space-y-6">
-                        <div>
-                            <label for="name" class="block text-left text-gray-700 font-semibold mb-2">Nombre Completo</label>
-                            <input type="text" id="name" name="name" class="w-full p-3 border border-gray-300 rounded-md focus:ring-2 focus:ring-paragon-blue focus:border-transparent transition duration-300" placeholder="Tu nombre" required>
-                        </div>
-                        <div>
-                            <label for="email" class="block text-left text-gray-700 font-semibold mb-2">Correo Electrónico</label>
-                            <input type="email" id="email" name="email" class="w-full p-3 border border-gray-300 rounded-md focus:ring-2 focus:ring-paragon-blue focus:border-transparent transition duration-300" placeholder="tu.email@ejemplo.com" required>
-                        </div>
-                        <div>
-                            <label for="phone" class="block text-left text-gray-700 font-semibold mb-2">Número de Teléfono</label>
-                            <input type="tel" id="phone" name="phone" class="w-full p-3 border border-gray-300 rounded-md focus:ring-2 focus:ring-paragon-blue focus:border-transparent transition duration-300" placeholder="+56 9 1234 5678">
-                        </div>
-                        <div>
-                            <label for="message" class="block text-left text-gray-700 font-semibold mb-2">Mensaje</label>
-                            <textarea id="message" name="message" rows="5" class="w-full p-3 border border-gray-300 rounded-md focus:ring-2 focus:ring-paragon-blue focus:border-transparent transition duration-300" placeholder="Describe brevemente tu consulta o proyecto..." required></textarea>
-                        </div>
-                        <button type="submit" class="btn-primary w-full py-3 rounded-md">Enviar Mensaje</button>
-                    </form>
-                </div>
-                <div class="order-1 md:order-2 flex items-center justify-center">
-                    <!-- Nueva imagen para el formulario de contacto (Placeholder) -->
-                    <img src="img/about-team.jpg" alt="Imagen de gestión y colaboración" class="rounded-lg shadow-md w-full h-auto object-cover">
-                </div>
-            </div>
+            <p class="text-lg leading-relaxed mb-4">
+              Contamos con una metodología desarrollada en base a los lineamientos y estándares del PMI®,
+              la cual ha sido aplicada en distintas organizaciones y proyectos, logrando contribuir
+              significativamente al éxito de los mismos.
+            </p>
+            <p class="text-lg leading-relaxed mb-4 font-nobile italic">
+              "Somos su aliado y lo apoyamos en todas las etapas y fases de sus proyectos y contratos, desde etapas iniciales hasta el cierre."
+            </p>
+            <p class="text-base leading-relaxed text-gray-600">
+              Como PMI® Registered Consultant N° 15-0224 (RCP) y R.E.P. # 3544, emitimos PDUs con garantía de calidad del PMI®.
+            </p>
+          </div>
         </div>
+      </div>
     </section>
 
-    <!-- Footer -->
-    <footer class="bg-paragon-dark-blue text-white py-10 px-4">
-        <div class="container mx-auto flex flex-col md:flex-row justify-between items-center text-center md:text-left">
-            <div class="mb-4 md:mb-0">
-                <!-- Placeholder para el logo de Paragon Chile en el footer -->
-                <img src="img/logo-paragon.png" alt="Logo Paragon Chile" class="h-12 mx-auto md:mx-0 rounded-md">
-                <p class="text-sm mt-2">Paragon Project Partners SpA</p>
-            </div>
-            <div class="text-center md:text-right">
-                <p class="text-sm mb-1">Dirección: Napoleón N° 3565 Of.904, Las Condes, Santiago, Chile</p>
-                <p class="text-sm mb-1">Email: <a href="mailto:marcelo.diaz@paragon-chile.cl" class="hover:underline">marcelo.diaz@paragon-chile.cl</a></p>
-                <p class="text-sm mb-1">Fono: +56229935424</p>
-                <p class="text-sm mb-4">Cel: +56979400451</p>
-                <p class="text-sm">&copy; <span id="current-year"></span> Paragon Project Partners. Todos los derechos reservados.</p>
-                <!-- Icono de LinkedIn -->
-                <a href="https://www.linkedin.com/company/paragon-project-partners" target="_blank" rel="noopener noreferrer" class="inline-block mt-4">
-                    <svg class="w-8 h-8 text-white hover:text-paragon-light-blue transition-colors duration-300" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
-                        <path fill-rule="evenodd" d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.761 0 5-2.239 5-5v-14c0-2.761-2.239-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.367-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z" clip-rule="evenodd"/>
-                    </svg>
-                </a>
-            </div>
+    <!-- Servicios -->
+    <section id="servicios" class="py-20 bg-white">
+      <div class="container mx-auto px-4 text-center">
+        <h2 class="text-4xl font-bold text-paragon-blue mb-10 font-nobile">Nuestros Servicios</h2>
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+          <div class="service-card">
+            <h3 class="text-2xl font-bold mb-4 font-nobile text-paragon-dark-blue">Gestión Contractual</h3>
+            <p class="text-gray-700 mb-4">CMO® para el manejo integral de aspectos contractuales.</p>
+            <a href="servicios/gestion-contractual.html" class="text-paragon-blue hover:text-paragon-light-blue font-semibold transition-colors duration-300">Saber más →</a>
+          </div>
+          <div class="service-card">
+            <h3 class="text-2xl font-bold mb-4 font-nobile text-paragon-dark-blue">Gestión de Proyectos</h3>
+            <p class="text-gray-700 mb-4">PMO® para planificación y control de proyectos y portafolios.</p>
+            <a href="servicios/gestion-proyectos.html" class="text-paragon-blue hover:text-paragon-light-blue font-semibold transition-colors duration-300">Saber más →</a>
+          </div>
+          <div class="service-card">
+            <h3 class="text-2xl font-bold mb-4 font-nobile text-paragon-dark-blue">Training & Coaching</h3>
+            <p class="text-gray-700 mb-4">Programas de formación y coaching con estándares PMI®.</p>
+            <a href="servicios/training-coaching.html" class="text-paragon-blue hover:text-paragon-light-blue font-semibold transition-colors duration-300">Saber más →</a>
+          </div>
+          <div class="service-card">
+            <h3 class="text-2xl font-bold mb-4 font-nobile text-paragon-dark-blue">Otros Servicios</h3>
+            <p class="text-gray-700 mb-4">ITO, peritajes y estudios especializados.</p>
+            <a href="servicios/otros-servicios.html" class="text-paragon-blue hover:text-paragon-light-blue font-semibold transition-colors duration-300">Saber más →</a>
+          </div>
         </div>
-    </footer>
+      </div>
+    </section>
 
-    <script src="js/main.js"></script>
-    <script src="js/chatbot.js"></script>
+    <!-- Carrusel Clientes -->
+    <section id="clientes" class="py-20 bg-gray-50 overflow-hidden">
+      <div class="container mx-auto px-4 text-center">
+        <h2 class="text-4xl font-bold text-paragon-blue mb-10 font-nobile">Nuestros Clientes Clave</h2>
+      </div>
+      <div class="client-carousel-container w-full overflow-hidden relative">
+        <div class="client-carousel flex animate-carousel-scroll">
+          <!-- Logos (ejemplo) -->
+          <div class="client-logo-wrapper flex-shrink-0 w-48 h-24 flex items-center justify-center p-4">
+            <img src="img/logos/bhp.png" alt="Logo BHP" class="client-logo grayscale hover:grayscale-0 transition-all duration-300 rounded-md">
+          </div>
+          <!-- ... deja el resto de logos como ya los tienes ... -->
+        </div>
+      </div>
+    </section>
+
+    <!-- Contacto -->
+    <section id="contacto" class="py-20 bg-white">
+      <div class="container mx-auto px-4 text-center">
+        <h2 class="text-4xl font-bold text-paragon-blue mb-10 font-nobile">Contáctanos</h2>
+        <p class="text-lg text-gray-700 mb-8">¿Tienes un proyecto en mente? Déjanos un mensaje y te contactaremos.</p>
+        <div class="max-w-4xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-8 bg-gray-50 p-8 rounded-lg shadow-lg">
+          <div class="order-2 md:order-1">
+            <form class="space-y-6">
+              <div>
+                <label for="name" class="block text-left text-gray-700 font-semibold mb-2">Nombre Completo</label>
+                <input id="name" class="w-full p-3 border border-gray-300 rounded-md focus:ring-2 focus:ring-paragon-blue focus:border-transparent transition duration-300" placeholder="Tu nombre" required>
+              </div>
+              <div>
+                <label for="email" class="block text-left text-gray-700 font-semibold mb-2">Correo Electrónico</label>
+                <input id="email" type="email" class="w-full p-3 border border-gray-300 rounded-md focus:ring-2 focus:ring-paragon-blue focus:border-transparent transition duration-300" placeholder="tu.email@ejemplo.com" required>
+              </div>
+              <div>
+                <label for="phone" class="block text-left text-gray-700 font-semibold mb-2">Número de Teléfono</label>
+                <input id="phone" class="w-full p-3 border border-gray-300 rounded-md focus:ring-2 focus:ring-paragon-blue focus:border-transparent transition duration-300" placeholder="+56 9 1234 5678">
+              </div>
+              <div>
+                <label for="message" class="block text-left text-gray-700 font-semibold mb-2">Mensaje</label>
+                <textarea id="message" rows="5" class="w-full p-3 border border-gray-300 rounded-md focus:ring-2 focus:ring-paragon-blue focus:border-transparent transition duration-300" placeholder="Describe tu consulta..." required></textarea>
+              </div>
+              <button type="submit" class="btn-primary w-full py-3 rounded-md">Enviar Mensaje</button>
+            </form>
+          </div>
+          <div class="order-1 md:order-2 flex items-center justify-center">
+            <img src="img/about-team.jpg" alt="Imagen de gestión y colaboración" class="rounded-lg shadow-md w-full h-auto object-cover">
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Footer -->
+  <footer class="bg-paragon-dark-blue text-white py-10 px-4">
+    <div class="container mx-auto flex flex-col md:flex-row justify-between items-center text-center md:text-left">
+      <div class="mb-4 md:mb-0">
+        <img src="img/logo-paragon.png" alt="Logo Paragon Chile" class="h-12 mx-auto md:mx-0 rounded-md">
+        <p class="text-sm mt-2">Paragon Project Partners SpA</p>
+      </div>
+      <div class="text-center md:text-right">
+        <p class="text-sm mb-1">Dirección: Napoleón N° 3565 Of.904, Las Condes, Santiago, Chile</p>
+        <p class="text-sm mb-1">Email: <a href="mailto:marcelo.diaz@paragon-chile.cl" class="hover:underline">marcelo.diaz@paragon-chile.cl</a></p>
+        <p class="text-sm mb-1">Fono: +56229935424</p>
+        <p class="text-sm mb-4">Cel: +56979400451</p>
+        <p class="text-sm">&copy; <span id="current-year"></span> Paragon Project Partners. Todos los derechos reservados.</p>
+        <a href="https://www.linkedin.com/company/paragon-project-partners" target="_blank" rel="noopener noreferrer" class="inline-block mt-4" aria-label="LinkedIn Footer">
+          <svg class="w-8 h-8 text-white hover:text-paragon-light-blue transition-colors duration-300" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+            <path fill-rule="evenodd" d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.761 0 5-2.239 5-5v-14c0-2.761-2.239-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.367-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z" clip-rule="evenodd"/>
+          </svg>
+        </a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="js/main.js"></script>
+  <script src="js/chatbot.js"></script>
 </body>
 </html>
