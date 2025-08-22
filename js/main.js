@@ -1,52 +1,72 @@
 // paragon-chile/js/main.js
-
 document.addEventListener('DOMContentLoaded', () => {
-    // --- Slider Hero (Home) ---
-    const slides = document.querySelectorAll('#hero-slider .hero-slide');
-    let currentSlide = 0;
-    const slideInterval = 5000; // 5 segundos
+  // --- Slider Hero (Home) ---
+  const slides = document.querySelectorAll('#hero-slider .hero-slide');
+  let currentSlide = 0;
+  const slideInterval = 5000; // 5s
 
-    function showSlide(index) {
-        slides.forEach((slide, i) => {
-            if (i === index) {
-                slide.classList.add('active');
-                slide.classList.remove('hidden');
-                // Si es el primer slide (video), asegurarse de que el video se reproduzca
-                if (i === 0 && slide.querySelector('video')) {
-                    slide.querySelector('video').play();
-                } else if (slide.querySelector('video')) {
-                    // Pausar el video en otros slides
-                    slide.querySelector('video').pause();
-                }
-            } else {
-                slide.classList.remove('active');
-                slide.classList.add('hidden');
-            }
-        });
-    }
-
-    function nextSlide() {
-        currentSlide = (currentSlide + 1) % slides.length;
-        showSlide(currentSlide);
-    }
-
-    // Inicializar el slider y el autoplay
+  function showSlide(index) {
+    slides.forEach((slide, i) => {
+      if (i === index) {
+        slide.classList.add('active');
+        slide.classList.remove('hidden');
+        const v = slide.querySelector('video');
+        if (v && i === 0) v.play();
+        if (v && i !== 0) v.pause();
+      } else {
+        slide.classList.remove('active');
+        slide.classList.add('hidden');
+      }
+    });
+  }
+  function nextSlide() {
+    currentSlide = (currentSlide + 1) % slides.length;
     showSlide(currentSlide);
-    setInterval(nextSlide, slideInterval);
+  }
+  showSlide(currentSlide);
+  setInterval(nextSlide, slideInterval);
 
-    // --- Carrusel de Logos de Clientes ---
-    // La animación del carrusel se maneja principalmente con CSS (@keyframes)
-    // El JavaScript aquí podría ser para un control más avanzado si fuera necesario,
-    // pero para un scroll infinito y pausa al hover, CSS es suficiente.
+  // --- Footer: año actual ---
+  const currentYearSpan = document.getElementById('current-year');
+  if (currentYearSpan) currentYearSpan.textContent = new Date().getFullYear();
 
-    // Obtener el año actual para el footer
-    const currentYearSpan = document.getElementById('current-year');
-    if (currentYearSpan) {
-        currentYearSpan.textContent = new Date().getFullYear();
-    }
-});
-// Toggle menú móvil
-document.getElementById('menu-toggle').addEventListener('click', function () {
+  // --- Menú móvil accesible ---
+  const btn = document.getElementById('menu-toggle');
   const menu = document.getElementById('menu');
-  menu.classList.toggle('hidden');
+
+  if (btn && menu) {
+    const openMenu = () => {
+      menu.classList.remove('hidden', 'opacity-0', 'translate-y-2');
+      btn.setAttribute('aria-expanded', 'true');
+    };
+    const closeMenu = () => {
+      menu.classList.add('hidden');
+      btn.setAttribute('aria-expanded', 'false');
+    };
+
+    btn.addEventListener('click', () => {
+      if (menu.classList.contains('hidden')) {
+        openMenu();
+      } else {
+        closeMenu();
+      }
+    });
+
+    // Cerrar al hacer click fuera
+    document.addEventListener('click', (e) => {
+      const withinMenu = menu.contains(e.target);
+      const withinBtn = btn.contains(e.target);
+      if (!withinMenu && !withinBtn) closeMenu();
+    });
+
+    // Cerrar con ESC
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape') closeMenu();
+    });
+
+    // Cerrar al navegar (click en un enlace del menú)
+    menu.querySelectorAll('a').forEach(a => {
+      a.addEventListener('click', () => closeMenu());
+    });
+  }
 });
