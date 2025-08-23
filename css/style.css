@@ -257,3 +257,11 @@ header { z-index: 50; }
 .client-logo { height: 48px; width: auto; object-fit: contain; }
 @keyframes carousel-scroll { 0% { transform: translateX(0); } 100% { transform: translateX(-50%); } }
 
+/* Fix definitivo: logos de clientes siempre a color */
+.client-logo, .client-logo img {
+  filter: none !important;
+  -webkit-filter: none !important;
+  mix-blend-mode: normal !important;
+  opacity: 1 !important;
+}
+
