@@ -182,3 +182,78 @@ footer {
 .border-paragon-blue { border-color: var(--paragon-blue); }
 .font-nobile { font-family: 'Nobile', sans-serif; }
 .font-inter { font-family: 'Inter', sans-serif; }
+
+/* ==== Paragon – Colores y utilidades ==== */
+:root {
+  --paragon-blue: #3A4B80;        /* Ajusta según tu manual si deseas */
+  --paragon-light-blue: #6C80C1;
+  --paragon-dark-blue: #37497B;
+}
+
+.text-paragon-blue { color: var(--paragon-blue); }
+.text-paragon-light-blue { color: var(--paragon-light-blue); }
+.text-paragon-dark-blue { color: var(--paragon-dark-blue); }
+.bg-paragon-blue { background-color: var(--paragon-blue); }
+.bg-paragon-dark-blue { background-color: var(--paragon-dark-blue); }
+
+.font-inter { font-family: 'Inter', system-ui, -apple-system, Segoe UI, Roboto, "Helvetica Neue", Arial, "Noto Sans", "Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji", sans-serif; }
+.font-nobile { font-family: 'Nobile', "Inter", Arial, sans-serif; }
+
+.btn-primary {
+  display:inline-block;
+  background: var(--paragon-dark-blue);
+  color:#fff;
+  padding: 10px 20px;
+  border-radius: 8px;
+  font-weight: 600;
+  transition: transform .2s, background-color .2s;
+}
+.btn-primary:hover { transform: translateY(-1px); background:#2f3d69; }
+
+/* ==== Hero ==== */
+#hero-slider .hero-slide { position: relative; }
+#hero-slider .hero-slide.hidden { display: none; }
+
+/* ==== Carrusel clientes ==== */
+.client-carousel { animation: carousel-scroll 25s linear infinite; gap: 40px; align-items: center; }
+.client-logo { height: 48px; width: auto; object-fit: contain; }
+@keyframes carousel-scroll {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+
+/* ==== Fix: dropdown del menú por encima del contenido ==== */
+header { z-index: 50; }
+#menu { z-index: 60; } /* mayor que header/slider */
+
+/* Animación de aparición menú móvil */
+#menu {
+  transition: all 0.3s ease-in-out;
+}
+/* Colores Paragon */
+:root{
+  --paragon-blue:#3A4B80;
+  --paragon-light-blue:#6C80C1;
+  --paragon-dark-blue:#37497B;
+}
+.text-paragon-blue{color:var(--paragon-blue);}
+.text-paragon-light-blue{color:var(--paragon-light-blue);}
+.text-paragon-dark-blue{color:var(--paragon-dark-blue);}
+.bg-paragon-blue{background:var(--paragon-blue);}
+.bg-paragon-dark-blue{background:var(--paragon-dark-blue);}
+
+/* Botón primario */
+.btn-primary{
+  display:inline-block;background:var(--paragon-dark-blue);color:#fff;
+  padding:10px 20px;border-radius:8px;font-weight:600;
+  transition:transform .2s, background-color .2s;
+}
+.btn-primary:hover{transform:translateY(-1px);background:#2f3d69;}
+
+/* Menú móvil: transición suave */
+#menu{transition:all .2s ease;}
+
+.client-carousel { animation: carousel-scroll 25s linear infinite; gap: 40px; align-items: center; }
+.client-logo { height: 48px; width: auto; object-fit: contain; }
+@keyframes carousel-scroll { 0% { transform: translateX(0); } 100% { transform: translateX(-50%); } }
+
