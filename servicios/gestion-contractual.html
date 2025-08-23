@@ -1,273 +1,111 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Gestión Contractual - Paragon Project Partners</title>
-    <script src="https://cdn.tailwindcss.com"></script>
-    <link rel="stylesheet" href="../css/style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Nobile:wght@400;700&display=swap" rel="stylesheet">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Gestión Contractual - Paragon Project Partners</title>
+
+  <!-- Tailwind + estilos -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="../css/style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Nobile:wght@400;700&display=swap" rel="stylesheet">
+
+  <!-- Forzar logos del carrusel SIEMPRE a color y asegurar altura -->
+  <style>
+    /* Color permanente (anula cualquier filtro) */
+    .client-logo, .client-logo img { filter: none !important; -webkit-filter: none !important; opacity: 1 !important; }
+    /* Carrusel mínimo funcional */
+    .client-carousel { display:flex; gap:40px; align-items:center; animation: carousel-scroll 25s linear infinite; }
+    .client-logo { height: 48px; width:auto; object-fit:contain; display:block; }
+    .client-logo-wrapper { width:12rem; height:6rem; display:flex; align-items:center; justify-content:center; }
+    @keyframes carousel-scroll { 0% { transform: translateX(0); } 100% { transform: translateX(-50%); } }
+    /* Fallback visible si una ruta no existe (ayuda a detectar nombres) */
+    .logo-fallback { background:#eef2ff; color:#37497B; border:1px solid #c7d2fe; padding:10px 14px; border-radius:10px; font-weight:600; }
+  </style>
 </head>
 <body class="font-inter text-gray-800">
 
-    <!-- Navegación y Header (igual que index.html, pero las rutas de los assets se ajustan) -->
-    <header class="bg-paragon-blue text-white py-4 fixed top-0 left-0 w-full z-50 shadow-md">
-        <div class="container mx-auto flex justify-between items-center px-4">
-            <a href="../index.html" class="flex items-center space-x-2">
-                <img src="../img/logo-paragon.png" alt="Logo Paragon Chile" class="h-10 rounded-md">
-                <span class="text-2xl font-bold font-nobile">Paragon Chile</span>
-            </a>
-            <nav>
-                <ul class="flex space-x-6">
-                    <li><a href="../index.html" class="hover:text-paragon-light-blue transition-colors duration-300">Inicio</a></li>
-                    <li><a href="gestion-contractual.html" class="hover:text-paragon-light-blue transition-colors duration-300">Gestión Contractual</a></li>
-                    <li><a href="gestion-proyectos.html" class="hover:text-paragon-light-blue transition-colors duration-300">Gestión de Proyectos</a></li>
-                    <li><a href="training-coaching.html" class="hover:text-paragon-light-blue transition-colors duration-300">Training & Coaching</a></li>
-                    <li><a href="otros-servicios.html" class="hover:text-paragon-light-blue transition-colors duration-300">Otros Servicios</a></li>
-                    <li><a href="../index.html#contacto" class="hover:text-paragon-light-blue transition-colors duration-300">Contacto</a></li>
-                </ul>
-            </nav>
-        </div>
-    </header>
+  <!-- Header dinámico -->
+  <div data-include="header" data-base="../"></div>
 
-    <!-- Mini-Hero Slider para servicios -->
-    <section id="mini-hero-contractual" class="relative w-full h-80 overflow-hidden mt-16">
-        <div class="mini-hero-slide active relative w-full h-full flex items-center justify-center">
-            <img src="../img/servicio-contractual-1.jpg" alt="Contratos y documentos" class="absolute w-full h-full object-cover">
-            <div class="absolute inset-0 bg-paragon-blue opacity-60"></div>
-            <div class="z-10 text-white text-center p-8 rounded-lg">
-                <h1 class="text-4xl md:text-5xl font-bold font-nobile">Gestión Contractual</h1>
-            </div>
-        </div>
-        <div class="mini-hero-slide relative w-full h-full hidden items-center justify-center">
-            <img src="../img/servicio-contractual-2.jpg" alt="Negociación profesional" class="absolute w-full h-full object-cover">
-            <div class="absolute inset-0 bg-paragon-blue opacity-60"></div>
-            <div class="z-10 text-white text-center p-8 rounded-lg">
-                <h1 class="text-4xl md:text-5xl font-bold font-nobile">Estrategia y Negociación</h1>
-            </div>
-        </div>
-        <div class="mini-hero-slide relative w-full h-full hidden items-center justify-center">
-            <img src="../img/servicio-contractual-3.jpg" alt="Arbitraje y resolución de conflictos" class="absolute w-full h-full object-cover">
-            <div class="absolute inset-0 bg-paragon-blue opacity-60"></div>
-            <div class="z-10 text-white text-center p-8 rounded-lg">
-                <h1 class="text-4xl md:text-5xl font-bold font-nobile">Prevención de Reclamos</h1>
-            </div>
-        </div>
-    </section>
+  <!-- Mini-Hero (mantén tus mismas imágenes si ya las tienes en /img/) -->
+  <section id="mini-hero-contractual" class="relative w-full h-80 overflow-hidden mt-20">
+    <div class="mini-hero-slide active relative w-full h-full flex items-center justify-center">
+      <img src="../img/servicio-contractual-1.jpg" alt="Contratos y documentos" class="absolute w-full h-full object-cover">
+      <div class="absolute inset-0 bg-paragon-blue opacity-60"></div>
+      <div class="z-10 text-white text-center p-8 rounded-lg">
+        <h1 class="text-4xl md:text-5xl font-bold font-nobile">Gestión Contractual</h1>
+      </div>
+    </div>
+    <div class="mini-hero-slide relative w-full h-full hidden items-center justify-center">
+      <img src="../img/servicio-contractual-2.jpg" alt="Negociación profesional" class="absolute w-full h-full object-cover">
+      <div class="absolute inset-0 bg-paragon-blue opacity-60"></div>
+      <div class="z-10 text-white text-center p-8 rounded-lg">
+        <h1 class="text-4xl md:text-5xl font-bold font-nobile">Estrategia y Negociación</h1>
+      </div>
+    </div>
+    <div class="mini-hero-slide relative w-full h-full hidden items-center justify-center">
+      <img src="../img/servicio-contractual-3.jpg" alt="Arbitraje y resolución de conflictos" class="absolute w-full h-full object-cover">
+      <div class="absolute inset-0 bg-paragon-blue opacity-60"></div>
+      <div class="z-10 text-white text-center p-8 rounded-lg">
+        <h1 class="text-4xl md:text-5xl font-bold font-nobile">Prevención de Reclamos</h1>
+      </div>
+    </div>
+  </section>
 
-    <!-- Contenido principal de Gestión Contractual -->
-    <main class="container mx-auto px-4 py-12">
-        <section class="mb-12">
-            <p class="text-lg leading-relaxed mb-6">
-                En Paragon Project Partners, nos constituimos en una <strong class="text-paragon-blue">CMO® (Contract Management Office)</strong>, apoyando o desarrollando el manejo de todos los Aspectos Contractuales de sus Proyectos. Estamos presentes en todas las etapas de un proyecto, desde la definición de la Estrategia de Contrataciones hasta el Cierre de Contratos.
-            </p>
-            <p class="text-lg leading-relaxed mb-6">
-                Nuestros servicios están diseñados para optimizar la gestión de sus contratos, minimizar riesgos y prevenir conflictos, asegurando el éxito y la eficiencia de sus proyectos.
-            </p>
-        </section>
+  <!-- Contenido central (deja aquí tu texto original) -->
+  <main class="container mx-auto px-4 py-12">
+    <!-- Tu contenido actual de Gestión Contractual va aquí -->
+  </main>
 
-        <section class="mb-12">
-            <h2 class="text-3xl font-bold text-paragon-blue mb-6 font-nobile">Ámbito de Acción Preventivo</h2>
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                <div class="bg-gray-50 p-6 rounded-lg shadow-md">
-                    <h3 class="text-xl font-semibold mb-3 text-paragon-dark-blue">Estrategia y Licitación</h3>
-                    <ul class="list-disc list-inside text-gray-700 space-y-2">
-                        <li>Selección de la modalidad Contractual más apropiada.</li>
-                        <li>Definición de paquetes de Contratación para óptimo desarrollo.</li>
-                        <li>Proceso de Licitación acorde a la modalidad seleccionada.</li>
-                        <li>Preselección de Oferentes (Inteligencia de Mercado).</li>
-                        <li>Preparación y/o Validación de Documentos de Licitación.</li>
-                        <li>Evaluación de Ofertas.</li>
-                        <li>Apoyo en Procesos de Negociación con Oferentes.</li>
-                        <li>Elaboración y/o Validación de Contratos finales.</li>
-                    </ul>
-                </div>
-                <div class="bg-gray-50 p-6 rounded-lg shadow-md">
-                    <h3 class="text-xl font-semibold mb-3 text-paragon-dark-blue">Gestión Contractual Preventiva</h3>
-                    <ul class="list-disc list-inside text-gray-700 space-y-2">
-                        <li>Análisis de Riesgos Contractuales.</li>
-                        <li>Gestión Contractual Preventiva durante el desarrollo del Contrato.</li>
-                        <li>Tratamiento de correspondencia e informes de análisis de controversias.</li>
-                        <li>Revisiones independientes a la Gestión Contractual en proyectos (Auditorías).</li>
-                    </ul>
-                </div>
-            </div>
-        </section>
+  <!-- Carrusel de logos a COLOR (usa las rutas reales de /img/logos/) -->
+  <section id="clientes-contractual" class="py-12 bg-gray-50 overflow-hidden">
+    <div class="container mx-auto px-4 text-center">
+      <h2 class="text-3xl font-bold text-paragon-blue mb-8 font-nobile">Clientes que Confían en Nosotros</h2>
+    </div>
 
-        <section class="mb-12">
-            <h2 class="text-3xl font-bold text-paragon-blue mb-6 font-nobile">Ámbito de Acción Resolutivo</h2>
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-                <div class="bg-gray-50 p-6 rounded-lg shadow-md">
-                    <h3 class="text-xl font-semibold mb-3 text-paragon-dark-blue">Resolución de Controversias</h3>
-                    <ul class="list-disc list-inside text-gray-700 space-y-2">
-                        <li>Auditorías Contractuales.</li>
-                        <li>Preparación de Informes de Diagnóstico Contractual.</li>
-                        <li>Participación en Procesos de Negociación.</li>
-                        <li>Preparación y/o Defensa de Reclamos.</li>
-                        <li>Informes Periciales.</li>
-                    </ul>
-                </div>
-                <div class="bg-gray-50 p-6 rounded-lg shadow-md">
-                    <h3 class="text-xl font-semibold mb-3 text-paragon-dark-blue">Apoyo en Procesos Arbitrales</h3>
-                    <ul class="list-disc list-inside text-gray-700 space-y-2">
-                        <li>Asesorías en la Elaboración de Estrategias para Arbitrajes.</li>
-                        <li>Preparación de Escritos Técnicos-Contractuales para Demanda, Contestación, Réplica y Dúplica.</li>
-                        <li>Proposición y/o revisión de Puntos de Prueba.</li>
-                        <li>Preparación de la Prueba.</li>
-                        <li>Observaciones a la Prueba.</li>
-                    </ul>
-                </div>
-            </div>
-        </section>
+    <div class="client-carousel-container w-full overflow-hidden relative">
+      <div class="client-carousel">
+        <!-- Ajusta nombres si difieren en tu carpeta /img/logos/ (sensible a mayúsculas/minúsculas) -->
+        <div class="client-logo-wrapper"><img class="client-logo" src="../img/logos/bhp.png" alt="BHP" onerror="this.outerHTML='<span class=\'logo-fallback\'>BHP</span>'"></div>
+        <div class="client-logo-wrapper"><img class="client-logo" src="../img/logos/angloamerican.png" alt="Anglo American" onerror="this.outerHTML='<span class=\'logo-fallback\'>Anglo American</span>'"></div>
+        <div class="client-logo-wrapper"><img class="client-logo" src="../img/logos/enap.png" alt="ENAP" onerror="this.outerHTML='<span class=\'logo-fallback\'>ENAP</span>'"></div>
+        <div class="client-logo-wrapper"><img class="client-logo" src="../img/logos/codelco.png" alt="Codelco" onerror="this.outerHTML='<span class=\'logo-fallback\'>Codelco</span>'"></div>
+        <div class="client-logo-wrapper"><img class="client-logo" src="../img/logos/acciona.png" alt="Acciona" onerror="this.outerHTML='<span class=\'logo-fallback\'>Acciona</span>'"></div>
+        <div class="client-logo-wrapper"><img class="client-logo" src="../img/logos/siemens.png" alt="Siemens" onerror="this.outerHTML='<span class=\'logo-fallback\'>Siemens</span>'"></div>
+        <div class="client-logo-wrapper"><img class="client-logo" src="../img/logos/cmp.png" alt="CMP" onerror="this.outerHTML='<span class=\'logo-fallback\'>CMP</span>'"></div>
+        <div class="client-logo-wrapper"><img class="client-logo" src="../img/logos/eiffage.png" alt="Eiffage" onerror="this.outerHTML='<span class=\'logo-fallback\'>Eiffage</span>'"></div>
+        <div class="client-logo-wrapper"><img class="client-logo" src="../img/logos/nueva-union.png" alt="Nueva Unión" onerror="this.outerHTML='<span class=\'logo-fallback\'>Nueva Unión</span>'"></div>
+        <div class="client-logo-wrapper"><img class="client-logo" src="../img/logos/acap.png" alt="ACAP" onerror="this.outerHTML='<span class=\'logo-fallback\'>ACAP</span>'"></div>
+        <div class="client-logo-wrapper"><img class="client-logo" src="../img/logos/puerto-las-losas.png" alt="Puerto Las Losas" onerror="this.outerHTML='<span class=\'logo-fallback\'>Puerto Las Losas</span>'"></div>
 
-        <section>
-            <h2 class="text-3xl font-bold text-paragon-blue mb-6 font-nobile text-center">Beneficios</h2>
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 text-center">
-                <div class="bg-white p-6 rounded-lg shadow-md border-t-4 border-paragon-blue">
-                    <h3 class="text-xl font-semibold mb-2">Minimización de Riesgos</h3>
-                    <p class="text-gray-700">Identificación y gestión proactiva de riesgos contractuales.</p>
-                </div>
-                <div class="bg-white p-6 rounded-lg shadow-md border-t-4 border-paragon-blue">
-                    <h3 class="text-xl font-semibold mb-2">Eficiencia Operacional</h3>
-                    <p class="text-gray-700">Optimización de procesos de contratación y administración.</p>
-                </div>
-                <div class="bg-white p-6 rounded-lg shadow-md border-t-4 border-paragon-blue">
-                    <h3 class="text-xl font-semibold mb-2">Resolución Efectiva</h3>
-                    <p class="text-gray-700">Soporte experto en la resolución de disputas y arbitrajes.</p>
-                </div>
-            </div>
-        </section>
-    </main>
+        <!-- Duplicados para efecto infinito -->
+        <div class="client-logo-wrapper"><img class="client-logo" src="../img/logos/bhp.png" alt="BHP" onerror="this.outerHTML='<span class=\'logo-fallback\'>BHP</span>'"></div>
+        <div class="client-logo-wrapper"><img class="client-logo" src="../img/logos/angloamerican.png" alt="Anglo American" onerror="this.outerHTML='<span class=\'logo-fallback\'>Anglo American</span>'"></div>
+        <div class="client-logo-wrapper"><img class="client-logo" src="../img/logos/enap.png" alt="ENAP" onerror="this.outerHTML='<span class=\'logo-fallback\'>ENAP</span>'"></div>
+        <div class="client-logo-wrapper"><img class="client-logo" src="../img/logos/codelco.png" alt="Codelco" onerror="this.outerHTML='<span class=\'logo-fallback\'>Codelco</span>'"></div>
+        <div class="client-logo-wrapper"><img class="client-logo" src="../img/logos/acciona.png" alt="Acciona" onerror="this.outerHTML='<span class=\'logo-fallback\'>Acciona</span>'"></div>
+        <div class="client-logo-wrapper"><img class="client-logo" src="../img/logos/siemens.png" alt="Siemens" onerror="this.outerHTML='<span class=\'logo-fallback\'>Siemens</span>'"></div>
+      </div>
+    </div>
+  </section>
 
-    <!-- Carrusel de Logos de Clientes (repetido para consistencia) -->
-    <section id="clientes-contractual" class="py-12 bg-gray-50 overflow-hidden">
-        <div class="container mx-auto px-4 text-center">
-            <h2 class="text-3xl font-bold text-paragon-blue mb-8 font-nobile">Clientes que Confían en Nosotros</h2>
-        </div>
-        <div class="client-carousel-container w-full overflow-hidden relative">
-            <div class="client-carousel flex animate-carousel-scroll">
-                <!-- Logos de Clientes (Placeholders, deben ser los mismos que en index.html) -->
-                <div class="client-logo-wrapper flex-shrink-0 w-48 h-24 flex items-center justify-center p-4">
-                    <img src="https://placehold.co/150x80/cccccc/000000?text=BHP" alt="Logo BHP" class="client-logo grayscale hover:grayscale-0 transition-all duration-300 rounded-md">
-                </div>
-                <div class="client-logo-wrapper flex-shrink-0 w-48 h-24 flex items-center justify-center p-4">
-                    <img src="https://placehold.co/150x80/cccccc/000000?text=Anglo+American" alt="Logo Anglo American" class="client-logo grayscale hover:grayscale-0 transition-all duration-300 rounded-md">
-                </div>
-                <div class="client-logo-wrapper flex-shrink-0 w-48 h-24 flex items-center justify-center p-4">
-                    <img src="https://placehold.co/150x80/cccccc/000000?text=ENAP" alt="Logo ENAP" class="client-logo grayscale hover:grayscale-0 transition-all duration-300 rounded-md">
-                </div>
-                <div class="client-logo-wrapper flex-shrink-0 w-48 h-24 flex items-center justify-center p-4">
-                    <img src="https://placehold.co/150x80/cccccc/000000?text=Codelco" alt="Logo Codelco" class="client-logo grayscale hover:grayscale-0 transition-all duration-300 rounded-md">
-                </div>
-                <div class="client-logo-wrapper flex-shrink-0 w-48 h-24 flex items-center justify-center p-4">
-                    <img src="https://placehold.co/150x80/cccccc/000000?text=Acciona" alt="Logo Acciona" class="client-logo grayscale hover:grayscale-0 transition-all duration-300 rounded-md">
-                </div>
-                <div class="client-logo-wrapper flex-shrink-0 w-48 h-24 flex items-center justify-center p-4">
-                    <img src="https://placehold.co/150x80/cccccc/000000?text=Siemens" alt="Logo Siemens" class="client-logo grayscale hover:grayscale-0 transition-all duration-300 rounded-md">
-                </div>
-                <div class="client-logo-wrapper flex-shrink-0 w-48 h-24 flex items-center justify-center p-4">
-                    <img src="https://placehold.co/150x80/cccccc/000000?text=CMP" alt="Logo CMP" class="client-logo grayscale hover:grayscale-0 transition-all duration-300 rounded-md">
-                </div>
-                <div class="client-logo-wrapper flex-shrink-0 w-48 h-24 flex items-center justify-center p-4">
-                    <img src="https://placehold.co/150x80/cccccc/000000?text=Eiffage" alt="Logo Eiffage" class="client-logo grayscale hover:grayscale-0 transition-all duration-300 rounded-md">
-                </div>
-                <div class="client-logo-wrapper flex-shrink-0 w-48 h-24 flex items-center justify-center p-4">
-                    <img src="https://placehold.co/150x80/cccccc/000000?text=Nueva+Union" alt="Logo Nueva Union" class="client-logo grayscale hover:grayscale-0 transition-all duration-300 rounded-md">
-                </div>
-                <div class="client-logo-wrapper flex-shrink-0 w-48 h-24 flex items-center justify-center p-4">
-                    <img src="https://placehold.co/150x80/cccccc/000000?text=ACAP" alt="Logo ACAP" class="client-logo grayscale hover:grayscale-0 transition-all duration-300 rounded-md">
-                </div>
-                <div class="client-logo-wrapper flex-shrink-0 w-48 h-24 flex items-center justify-center p-4">
-                    <img src="https://placehold.co/150x80/cccccc/000000?text=Pto+Las+Losas" alt="Logo Puerto Las Losas" class="client-logo grayscale hover:grayscale-0 transition-all duration-300 rounded-md">
-                </div>
-                <!-- Repetir logos para el efecto infinito -->
-                <div class="client-logo-wrapper flex-shrink-0 w-48 h-24 flex items-center justify-center p-4">
-                    <img src="https://placehold.co/150x80/cccccc/000000?text=BHP" alt="Logo BHP" class="client-logo grayscale hover:grayscale-0 transition-all duration-300 rounded-md">
-                </div>
-                <div class="client-logo-wrapper flex-shrink-0 w-48 h-24 flex items-center justify-center p-4">
-                    <img src="https://placehold.co/150x80/cccccc/000000?text=Anglo+American" alt="Logo Anglo American" class="client-logo grayscale hover:grayscale-0 transition-all duration-300 rounded-md">
-                </div>
-                <div class="client-logo-wrapper flex-shrink-0 w-48 h-24 flex items-center justify-center p-4">
-                    <img src="https://placehold.co/150x80/cccccc/000000?text=ENAP" alt="Logo ENAP" class="client-logo grayscale hover:grayscale-0 transition-all duration-300 rounded-md">
-                </div>
-                <div class="client-logo-wrapper flex-shrink-0 w-48 h-24 flex items-center justify-center p-4">
-                    <img src="https://placehold.co/150x80/cccccc/000000?text=Codelco" alt="Logo Codelco" class="client-logo grayscale hover:grayscale-0 transition-all duration-300 rounded-md">
-                </div>
-                <div class="client-logo-wrapper flex-shrink-0 w-48 h-24 flex items-center justify-center p-4">
-                    <img src="https://placehold.co/150x80/cccccc/000000?text=Acciona" alt="Logo Acciona" class="client-logo grayscale hover:grayscale-0 transition-all duration-300 rounded-md">
-                </div>
-                <div class="client-logo-wrapper flex-shrink-0 w-48 h-24 flex items-center justify-center p-4">
-                    <img src="https://placehold.co/150x80/cccccc/000000?text=Siemens" alt="Logo Siemens" class="client-logo grayscale hover:grayscale-0 transition-all duration-300 rounded-md">
-                </div>
-                <div class="client-logo-wrapper flex-shrink-0 w-48 h-24 flex items-center justify-center p-4">
-                    <img src="https://placehold.co/150x80/cccccc/000000?text=CMP" alt="Logo CMP" class="client-logo grayscale hover:grayscale-0 transition-all duration-300 rounded-md">
-                </div>
-                <div class="client-logo-wrapper flex-shrink-0 w-48 h-24 flex items-center justify-center p-4">
-                    <img src="https://placehold.co/150x80/cccccc/000000?text=Eiffage" alt="Logo Eiffage" class="client-logo grayscale hover:grayscale-0 transition-all duration-300 rounded-md">
-                </div>
-                <div class="client-logo-wrapper flex-shrink-0 w-48 h-24 flex items-center justify-center p-4">
-                    <img src="https://placehold.co/150x80/cccccc/000000?text=Nueva+Union" alt="Logo Nueva Union" class="client-logo grayscale hover:grayscale-0 transition-all duration-300 rounded-md">
-                </div>
-                <div class="client-logo-wrapper flex-shrink-0 w-48 h-24 flex items-center justify-center p-4">
-                    <img src="https://placehold.co/150x80/cccccc/000000?text=ACAP" alt="Logo ACAP" class="client-logo grayscale hover:grayscale-0 transition-all duration-300 rounded-md">
-                </div>
-                <div class="client-logo-wrapper flex-shrink-0 w-48 h-24 flex items-center justify-center p-4">
-                    <img src="https://placehold.co/150x80/cccccc/000000?text=Pto+Las+Losas" alt="Logo Puerto Las Losas" class="client-logo grayscale hover:grayscale-0 transition-all duration-300 rounded-md">
-                </div>
-            </div>
-        </div>
-    </section>
+  <!-- Footer dinámico -->
+  <div data-include="footer" data-base="../"></div>
 
-    <!-- Footer (igual que index.html, pero las rutas de los assets se ajustan) -->
-    <footer class="bg-paragon-dark-blue text-white py-10 px-4">
-        <div class="container mx-auto flex flex-col md:flex-row justify-between items-center text-center md:text-left">
-            <div class="mb-4 md:mb-0">
-                <img src="../img/logo-paragon.png" alt="Logo Paragon Chile" class="h-12 mx-auto md:mx-0 rounded-md">
-                <p class="text-sm mt-2">Paragon Project Partners SpA</p>
-            </div>
-            <div class="text-center md:text-right">
-                <p class="text-sm mb-1">Dirección: Napoleón N° 3565 Of.904, Las Condes, Santiago, Chile</p>
-                <p class="text-sm mb-1">Email: <a href="mailto:marcelo.diaz@paragon-chile.cl" class="hover:underline">marcelo.diaz@paragon-chile.cl</a></p>
-                <p class="text-sm mb-1">Fono: +56229935424</p>
-                <p class="text-sm mb-4">Cel: +56979400451</p>
-                <p class="text-sm">&copy; <span id="current-year-service"></span> Paragon Project Partners. Todos los derechos reservados.</p>
-            </div>
-        </div>
-    </footer>
-
-    <script>
-        // Lógica del mini-hero slider para servicios
-        document.addEventListener('DOMContentLoaded', () => {
-            const slides = document.querySelectorAll('#mini-hero-contractual .mini-hero-slide');
-            let currentSlide = 0;
-            const slideInterval = 5000; // 5 segundos
-
-            function showSlide(index) {
-                slides.forEach((slide, i) => {
-                    if (i === index) {
-                        slide.classList.add('active');
-                        slide.classList.remove('hidden');
-                    } else {
-                        slide.classList.remove('active');
-                        slide.classList.add('hidden');
-                    }
-                });
-            }
-
-            function nextSlide() {
-                currentSlide = (currentSlide + 1) % slides.length;
-                showSlide(currentSlide);
-            }
-
-            showSlide(currentSlide);
-            setInterval(nextSlide, slideInterval);
-
-            // Obtener el año actual para el footer
-            const currentYearSpan = document.getElementById('current-year-service');
-            if (currentYearSpan) {
-                currentYearSpan.textContent = new Date().getFullYear();
-            }
-        });
-    </script>
+  <!-- Scripts -->
+  <script src="../js/includes.js"></script>
+  <script>
+    // Slider del mini-hero (igual que el resto de páginas)
+    document.addEventListener('DOMContentLoaded', () => {
+      const slides = document.querySelectorAll('#mini-hero-contractual .mini-hero-slide');
+      let i = 0;
+      setInterval(() => {
+        slides[i].classList.add('hidden');
+        i = (i + 1) % slides.length;
+        slides[i].classList.remove('hidden');
+      }, 5000);
+    });
+  </script>
 </body>
 </html>
