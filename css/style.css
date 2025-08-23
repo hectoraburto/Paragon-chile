@@ -69,6 +69,13 @@ h1, h2, h3, h4, h5, h6 {
     background-color: rgba(0, 0, 0, 0.5); /* Overlay oscuro para legibilidad */
 }
 
+/* Hero banner home */
+.hero-title {
+    color: #FFFFFF !important;
+   
+    font-weight: 700;
+}
+
 /* Service Cards */
 .service-card {
     @apply bg-white p-8 rounded-lg shadow-xl border border-gray-200
