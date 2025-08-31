@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Generador KB — Paragon</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="min-h-screen bg-gray-50 text-gray-800">
+  <div class="max-w-3xl mx-auto p-6">
+    <h1 class="text-3xl font-bold mb-2">Generar Base de Conocimiento (kb.js)</h1>
+    <p class="text-gray-600 mb-6">
+      Este generador recorre tu sitio (home + páginas de servicios), extrae el contenido y descarga un <code>kb.js</code.
+      Súbelo luego a <code>js/kb.js</code> para actualizar el chatbot.
+    </p>
+
+    <div class="bg-white rounded-xl border p-5 shadow-sm">
+      <h2 class="text-xl font-semibold mb-3">Páginas a rastrear</h2>
+      <p class="text-sm text-gray-600 mb-3">
+        Puedes dejar la lista por defecto o detectar automáticamente las páginas en <code>/servicios/</code>.
+      </p>
+
+      <textarea id="seed-urls" class="w-full p-3 border rounded-md font-mono text-sm" rows="6">index.html
+servicios/gestion-proyectos.html
+servicios/gestion-contractual.html
+servicios/training-coaching.html
+servicios/otros-servicios.html</textarea>
+
+      <div class="flex flex-wrap gap-3 mt-4">
+        <button id="detect" class="px-4 py-2 rounded-md border bg-white hover:bg-gray-50">Detectar /servicios/ automáticamente</button>
+        <button id="generate" class="px-4 py-2 rounded-md bg-paragon-blue text-white">Generar y descargar kb.js</button>
+      </div>
+
+      <div id="log" class="mt-5 text-sm whitespace-pre-wrap bg-gray-50 border rounded-md p-3 h-52 overflow-auto"></div>
+    </div>
+  </div>
+
+  <script src="../js/build-kb.js"></script>
+</body>
+</html>
