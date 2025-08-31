@@ -1,72 +1,34 @@
-// paragon-chile/js/main.js
+// js/main.js
 document.addEventListener('DOMContentLoaded', () => {
-  // --- Slider Hero (Home) ---
-  const slides = document.querySelectorAll('#hero-slider .hero-slide');
-  let currentSlide = 0;
-  const slideInterval = 5000; // 5s
-
-  function showSlide(index) {
-    slides.forEach((slide, i) => {
-      if (i === index) {
-        slide.classList.add('active');
-        slide.classList.remove('hidden');
-        const v = slide.querySelector('video');
-        if (v && i === 0) v.play();
-        if (v && i !== 0) v.pause();
-      } else {
-        slide.classList.remove('active');
-        slide.classList.add('hidden');
-      }
-    });
-  }
-  function nextSlide() {
-    currentSlide = (currentSlide + 1) % slides.length;
-    showSlide(currentSlide);
-  }
-  showSlide(currentSlide);
-  setInterval(nextSlide, slideInterval);
-
-  // --- Footer: año actual ---
-  const currentYearSpan = document.getElementById('current-year');
-  if (currentYearSpan) currentYearSpan.textContent = new Date().getFullYear();
-
-  // --- Menú móvil accesible ---
-  const btn = document.getElementById('menu-toggle');
-  const menu = document.getElementById('menu');
-
-  if (btn && menu) {
-    const openMenu = () => {
-      menu.classList.remove('hidden', 'opacity-0', 'translate-y-2');
-      btn.setAttribute('aria-expanded', 'true');
+  // --- Hero Slider ---
+  const slides = Array.from(document.querySelectorAll('#hero-slider .hero-slide'));
+  if (slides.length) {
+    let idx = 0;
+    const play = (i) => {
+      slides.forEach((s, k) => {
+        const v = s.querySelector('video');
+        if (k === i) {
+          s.classList.add('active'); s.classList.remove('hidden');
+          if (v) v.play().catch(()=>{});
+        } else {
+          s.classList.remove('active'); s.classList.add('hidden');
+          if (v) { v.pause(); v.currentTime = 0; }
+        }
+      });
     };
-    const closeMenu = () => {
-      menu.classList.add('hidden');
-      btn.setAttribute('aria-expanded', 'false');
-    };
-
-    btn.addEventListener('click', () => {
-      if (menu.classList.contains('hidden')) {
-        openMenu();
-      } else {
-        closeMenu();
-      }
-    });
-
-    // Cerrar al hacer click fuera
-    document.addEventListener('click', (e) => {
-      const withinMenu = menu.contains(e.target);
-      const withinBtn = btn.contains(e.target);
-      if (!withinMenu && !withinBtn) closeMenu();
-    });
-
-    // Cerrar con ESC
-    document.addEventListener('keydown', (e) => {
-      if (e.key === 'Escape') closeMenu();
-    });
-
-    // Cerrar al navegar (click en un enlace del menú)
-    menu.querySelectorAll('a').forEach(a => {
-      a.addEventListener('click', () => closeMenu());
-    });
+    play(0);
+    setInterval(() => { idx = (idx + 1) % slides.length; play(idx); }, 6000);
   }
+
+  // --- Pausa del carrusel de clientes al pasar el mouse (si deseas JS además del :hover CSS) ---
+  const cc = document.querySelector('.client-carousel');
+  const container = document.querySelector('.client-carousel-container');
+  if (cc && container) {
+    container.addEventListener('mouseenter', () => { cc.style.animationPlayState = 'paused'; });
+    container.addEventListener('mouseleave', () => { cc.style.animationPlayState = 'running'; });
+  }
+
+  // --- Año (backup; también lo hace includes.js) ---
+  const y = document.getElementById('current-year');
+  if (y) y.textContent = new Date().getFullYear();
 });

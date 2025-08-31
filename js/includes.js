@@ -1,55 +1,49 @@
 // js/includes.js
-document.addEventListener('DOMContentLoaded', async () => {
-  const containers = document.querySelectorAll('[data-include]');
-  for (const el of containers) {
-    const name = el.getAttribute('data-include'); // "header" o "footer"
-    const base = el.getAttribute('data-base') || ''; // "" (home) o "../" (servicios)
-    try {
-      const res = await fetch(`${base}partials/${name}.html`);
-      const html = await res.text();
-      // Reemplaza {{BASE}} por el prefijo correcto
-      el.innerHTML = html.replaceAll('{{BASE}}', base);
+(function () {
+  function ready(fn){ document.readyState!=='loading' ? fn() : document.addEventListener('DOMContentLoaded', fn); }
 
-      // Inicializar header (menú móvil)
-      if (name === 'header') {
-        const btn = el.querySelector('#menu-toggle');
-        const menu = el.querySelector('#menu');
-        if (btn && menu) {
-          btn.setAttribute('aria-expanded', 'false');
-          btn.addEventListener('click', () => {
-            const isHidden = menu.classList.toggle('hidden');
-            btn.setAttribute('aria-expanded', String(!isHidden));
-          });
-          // Cerrar al hacer click fuera
-          document.addEventListener('click', (e) => {
-            if (!menu.contains(e.target) && !btn.contains(e.target)) {
-              menu.classList.add('hidden');
-              btn.setAttribute('aria-expanded', 'false');
-            }
-          });
-          // Cerrar con ESC
-          document.addEventListener('keydown', (e) => {
-            if (e.key === 'Escape') {
-              menu.classList.add('hidden');
-              btn.setAttribute('aria-expanded', 'false');
-            }
-          });
-          // Cerrar al navegar
-          menu.querySelectorAll('a').forEach(a => {
-            a.addEventListener('click', () => {
-              menu.classList.add('hidden');
-              btn.setAttribute('aria-expanded', 'false');
-            });
-          });
-        }
-      }
-
-      // Año dinámico (footer)
-      const y = el.querySelector('#current-year');
-      if (y) y.textContent = new Date().getFullYear();
-
-    } catch (err) {
-      console.error(`No se pudo cargar partial ${name}:`, err);
-    }
+  async function loadPartial(where, name, base) {
+    const url = `${base}partials/${name}.html`;
+    const res = await fetch(url + "?v=" + Date.now());
+    if (!res.ok) throw new Error(`HTTP ${res.status} al cargar ${url}`);
+    let html = await res.text();
+    html = html.replaceAll("{{BASE}}", base);
+    where.outerHTML = html; // reemplaza el nodo <header>/<footer> o el contenedor
   }
-});
+
+  ready(async () => {
+    // Soporta <header data-include="header" data-base=""> y <footer ...>
+    // y también contenedores genéricos con [data-include]
+    const targets = document.querySelectorAll('[data-include]');
+    for (const t of targets) {
+      const name = t.getAttribute('data-include'); // "header" | "footer"
+      const base = t.getAttribute('data-base') || '';
+      try { await loadPartial(t, name, base); } catch (e) { console.error(e); }
+    }
+
+    // Inicializa comportamientos del header ya inyectado
+    const header = document.querySelector('header');
+    if (header) {
+      const btn = header.querySelector('#menu-toggle');
+      const menu = header.querySelector('#menu');
+
+      const closeMenu = () => { if (menu){ menu.classList.add('hidden'); btn?.setAttribute('aria-expanded','false'); } };
+      const openMenu  = () => { if (menu){ menu.classList.remove('hidden'); btn?.setAttribute('aria-expanded','true'); } };
+
+      if (btn && menu) {
+        btn.addEventListener('click', () => {
+          menu.classList.contains('hidden') ? openMenu() : closeMenu();
+        });
+        document.addEventListener('click', (e) => {
+          if (!menu.contains(e.target) && !btn.contains(e.target)) closeMenu();
+        });
+        document.addEventListener('keydown', (e) => { if (e.key==='Escape') closeMenu(); });
+        menu.querySelectorAll('a').forEach(a => a.addEventListener('click', closeMenu));
+      }
+    }
+
+    // Año dinámico en footer
+    const yearSpans = document.querySelectorAll('#current-year');
+    yearSpans.forEach(s => s.textContent = new Date().getFullYear());
+  });
+})();

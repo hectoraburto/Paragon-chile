@@ -1,274 +1,97 @@
-/* paragon-chile/css/style.css */
-
-/* Variables CSS con colores corporativos */
-:root {
-    --paragon-blue: #37497B;
-    --paragon-dark-blue: #2A3B5E;
-    --paragon-light-blue: #6B88B2;
-    --gray-text: #4A4A4A;
-    --gray-bg: #F8F8F8;
-    --white: #FFFFFF;
-}
-
-/* Base styles and typography */
-body {
-    font-family: 'Inter', sans-serif;
-    color: var(--gray-text);
-    line-height: 1.6;
-    margin-top: 64px; /* Para compensar la barra de navegación fija */
-}
-
-h1, h2, h3, h4, h5, h6 {
-    font-family: 'Nobile', sans-serif;
-    color: var(--paragon-dark-blue);
-    margin-bottom: 1rem;
-}
-
-.container {
-    max-width: 1200px;
-}
-
-/* Global button styles */
-.btn-primary {
-    @apply inline-block px-8 py-3 bg-paragon-blue text-white font-semibold rounded-full shadow-lg
-           hover:bg-paragon-light-blue transition-all duration-300 transform hover:scale-105;
-}
-
-/* Hero Slider specific styles */
-#hero-slider {
-    position: relative;
-}
-
-.hero-slide {
-    width: 100%;
-    height: 100vh; /* Ocupa toda la altura de la ventana */
-    position: absolute;
-    top: 0;
-    left: 0;
-    transition: opacity 1s ease-in-out;
-}
-
-.hero-slide.active {
-    opacity: 1;
-    z-index: 10;
-    display: flex; /* Asegura que la diapositiva activa se muestre correctamente */
-}
-
-.hero-slide video, .hero-slide img {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    top: 0;
-    left: 0;
-}
-
-.hero-slide .overlay {
-    position: absolute;
-    inset: 0;
-    background-color: rgba(0, 0, 0, 0.5); /* Overlay oscuro para legibilidad */
-}
-
-/* Hero banner home */
-.hero-title {
-    color: #FFFFFF !important;
-   
-    font-weight: 700;
-}
-
-/* Service Cards */
-.service-card {
-    @apply bg-white p-8 rounded-lg shadow-xl border border-gray-200
-           hover:shadow-2xl hover:border-paragon-blue transition-all duration-300 transform hover:-translate-y-1;
-}
-
-/* Client Carousel specific styles */
-.client-carousel-container {
-    position: relative;
-}
-
-.client-carousel {
-    display: flex;
-    white-space: nowrap;
-    animation: carousel-scroll 30s linear infinite; /* Animación de scroll */
-}
-
-.client-logo-wrapper {
-    margin: 0 1rem; /* Espacio entre logos */
-}
-
-.client-logo {
-    max-width: 100%;
-    height: auto;
-    object-fit: contain;
-}
-
-/* Pausar animación al pasar el ratón */
-.client-carousel-container:hover .client-carousel {
-    animation-play-state: paused;
-}
-
-/* Keyframes para la animación del carrusel */
-@keyframes carousel-scroll {
-    0% {
-        transform: translateX(0);
-    }
-    100% {
-        transform: translateX(-50%); /* Para un scroll infinito */
-    }
-}
-
-
-/* Formulario de Contacto */
-input[type="text"],
-input[type="email"],
-input[type="tel"],
-textarea {
-    @apply border border-gray-300 rounded-md p-3 focus:outline-none focus:ring-2 focus:ring-paragon-blue;
-}
-
-/* Footer specific styles */
-footer {
-    background-color: var(--paragon-dark-blue);
-}
-
-/* Responsive design (Media Queries) */
-@media (max-width: 768px) {
-    body {
-        font-size: 16px;
-    }
-
-    header {
-        padding-top: 1rem;
-        padding-bottom: 1rem;
-    }
-
-    nav ul {
-        flex-direction: column;
-        align-items: center;
-        margin-top: 1rem;
-    }
-
-    nav ul li {
-        margin-bottom: 0.5rem;
-    }
-
-    .hero-slide h1 {
-        font-size: 3rem;
-    }
-
-    .hero-slide p {
-        font-size: 1.5rem;
-    }
-
-    .grid-cols-1, .md\:grid-cols-2 {
-        grid-template-columns: 1fr;
-    }
-
-    .client-logo-wrapper {
-        width: 120px; /* Ajuste para pantallas más pequeñas */
-        height: 60px;
-    }
-
-    footer {
-        flex-direction: column;
-    }
-
-    footer img {
-        margin-bottom: 1rem;
-    }
-}
-
-/* Custom Tailwind classes for colors */
-.bg-paragon-blue { background-color: var(--paragon-blue); }
-.text-paragon-blue { color: var(--paragon-blue); }
-.hover\:text-paragon-light-blue:hover { color: var(--paragon-light-blue); }
-.bg-paragon-dark-blue { background-color: var(--paragon-dark-blue); }
-.text-paragon-dark-blue { color: var(--paragon-dark-blue); }
-.focus\:ring-paragon-blue:focus { --tw-ring-color: var(--paragon-blue); }
-.border-paragon-blue { border-color: var(--paragon-blue); }
-.font-nobile { font-family: 'Nobile', sans-serif; }
-.font-inter { font-family: 'Inter', sans-serif; }
-
-/* ==== Paragon – Colores y utilidades ==== */
-:root {
-  --paragon-blue: #3A4B80;        /* Ajusta según tu manual si deseas */
-  --paragon-light-blue: #6C80C1;
-  --paragon-dark-blue: #37497B;
-}
-
-.text-paragon-blue { color: var(--paragon-blue); }
-.text-paragon-light-blue { color: var(--paragon-light-blue); }
-.text-paragon-dark-blue { color: var(--paragon-dark-blue); }
-.bg-paragon-blue { background-color: var(--paragon-blue); }
-.bg-paragon-dark-blue { background-color: var(--paragon-dark-blue); }
-
-.font-inter { font-family: 'Inter', system-ui, -apple-system, Segoe UI, Roboto, "Helvetica Neue", Arial, "Noto Sans", "Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji", sans-serif; }
-.font-nobile { font-family: 'Nobile', "Inter", Arial, sans-serif; }
-
-.btn-primary {
-  display:inline-block;
-  background: var(--paragon-dark-blue);
-  color:#fff;
-  padding: 10px 20px;
-  border-radius: 8px;
-  font-weight: 600;
-  transition: transform .2s, background-color .2s;
-}
-.btn-primary:hover { transform: translateY(-1px); background:#2f3d69; }
-
-/* ==== Hero ==== */
-#hero-slider .hero-slide { position: relative; }
-#hero-slider .hero-slide.hidden { display: none; }
-
-/* ==== Carrusel clientes ==== */
-.client-carousel { animation: carousel-scroll 25s linear infinite; gap: 40px; align-items: center; }
-.client-logo { height: 48px; width: auto; object-fit: contain; }
-@keyframes carousel-scroll {
-  0% { transform: translateX(0); }
-  100% { transform: translateX(-50%); }
-}
-
-/* ==== Fix: dropdown del menú por encima del contenido ==== */
-header { z-index: 50; }
-#menu { z-index: 60; } /* mayor que header/slider */
-
-/* Animación de aparición menú móvil */
-#menu {
-  transition: all 0.3s ease-in-out;
-}
-/* Colores Paragon */
+/* ========== Paragon – Tokens de marca ========== */
 :root{
-  --paragon-blue:#3A4B80;
-  --paragon-light-blue:#6C80C1;
-  --paragon-dark-blue:#37497B;
+  --paragon-blue: #37497B;       /* Color corporativo base (manual) */
+  --paragon-dark-blue: #2A3B5E;  /* Sombra/variación */
+  --paragon-light-blue: #6C80C1; /* Realce */
+  --gray-text: #4A4A4A;
+  --gray-bg: #F8F8F8;
+  --white: #FFFFFF;
 }
-.text-paragon-blue{color:var(--paragon-blue);}
-.text-paragon-light-blue{color:var(--paragon-light-blue);}
-.text-paragon-dark-blue{color:var(--paragon-dark-blue);}
-.bg-paragon-blue{background:var(--paragon-blue);}
-.bg-paragon-dark-blue{background:var(--paragon-dark-blue);}
 
-/* Botón primario */
+.font-inter { font-family: 'Inter', system-ui, -apple-system, Segoe UI, Roboto, Arial, "Noto Sans", sans-serif; }
+.font-nobile { font-family: 'Nobile', 'Inter', Arial, sans-serif; }
+
+.text-paragon-blue { color: var(--paragon-blue); }
+.text-paragon-dark-blue { color: var(--paragon-blue); }
+.text-paragon-light-blue { color: var(--paragon-light-blue); }
+.bg-paragon-blue { background-color: var(--paragon-blue); }
+.bg-paragon-dark-blue { background-color: var(--paragon-dark-blue); }
+
+/* ========== Global ========== */
+body { color: var(--gray-text); line-height: 1.6; margin-top: 64px; }
+.container { max-width: 1200px; }
+
+/* Header fijo por encima del slider y contenidos */
+header { z-index: 50; }
+#menu { z-index: 60; transition: all 0.3s ease-in-out; }
+
+/* Botón primario coherente */
 .btn-primary{
-  display:inline-block;background:var(--paragon-dark-blue);color:#fff;
-  padding:10px 20px;border-radius:8px;font-weight:600;
-  transition:transform .2s, background-color .2s;
+  display:inline-block; background: var(--paragon-blue); color:#fff;
+  padding:.75rem 1.25rem; border-radius:.75rem; font-weight:600;
+  box-shadow: 0 8px 24px rgba(0,0,0,.12);
+  transition: transform .15s ease, background .15s ease, box-shadow .15s ease;
 }
-.btn-primary:hover{transform:translateY(-1px);background:#2f3d69;}
+.btn-primary:hover{ background: var(--paragon-light-blue); transform: translateY(-1px); box-shadow:0 12px 32px rgba(0,0,0,.16); }
 
-/* Menú móvil: transición suave */
-#menu{transition:all .2s ease;}
+/* ========== Hero Slider ========== */
+#hero-slider { position: relative; }
+.hero-slide { width:100%; height:100vh; position:absolute; top:0; left:0; transition: opacity 0.6s ease; }
+.hero-slide.hidden { opacity:0; pointer-events:none; }
+.hero-slide.active { opacity:1; z-index:10; display:flex; }
+.hero-title { color:#fff !important; font-weight:700; }
 
-.client-carousel { animation: carousel-scroll 25s linear infinite; gap: 40px; align-items: center; }
-.client-logo { height: 48px; width: auto; object-fit: contain; }
-@keyframes carousel-scroll { 0% { transform: translateX(0); } 100% { transform: translateX(-50%); } }
-
-/* Fix definitivo: logos de clientes siempre a color */
-.client-logo, .client-logo img {
-  filter: none !important;
-  -webkit-filter: none !important;
-  mix-blend-mode: normal !important;
-  opacity: 1 !important;
+/* ========== Service Cards ========== */
+.service-card{
+  background:#fff; border:1px solid #e5e7eb; border-radius: .75rem;
+  padding:2rem; text-align:left;
+  box-shadow: 0 2px 8px rgba(0,0,0,.04);
+  transition: transform .2s ease, box-shadow .2s ease, border-color .2s ease;
+}
+.service-card:hover{
+  transform: translateY(-2px);
+  box-shadow: 0 12px 28px rgba(0,0,0,.10);
+  border-color:#d1d5db;
 }
 
+/* ========== Carrusel de clientes ========== */
+.client-carousel-container { position: relative; -webkit-mask-image: linear-gradient(to right, transparent 0, #000 5%, #000 95%, transparent 100%); mask-image: linear-gradient(to right, transparent 0, #000 5%, #000 95%, transparent 100%); }
+.client-carousel { display:flex; white-space:nowrap; align-items:center; gap:40px; animation: carousel-scroll 25s linear infinite; }
+.client-logo-wrapper { margin: 0 1rem; }
+.client-logo { height:48px; width:auto; object-fit:contain; filter:none !important; mix-blend-mode:normal !important; opacity:1 !important; }
+@keyframes carousel-scroll { 0%{ transform:translateX(0);} 100%{ transform:translateX(-50%);} }
+.client-carousel-container:hover .client-carousel { animation-play-state: paused; }
+
+/* ========== Footer ========== */
+footer { background-color: var(--paragon-dark-blue); color:#fff; }
+
+/* ========== Chatbot (UI mínima) ========== */
+.chatbot-btn{
+  position: fixed; right: 16px; bottom: 16px; width:56px; height:56px;
+  border-radius: 9999px; background: var(--paragon-blue); color:#fff;
+  display:flex; align-items:center; justify-content:center;
+  box-shadow: 0 14px 30px rgba(0,0,0,.22);
+  cursor:pointer;
+}
+.chatbot-btn:hover{ background: var(--paragon-light-blue); }
+
+.chatbot-panel{
+  position: fixed; right: 16px; bottom: 82px; width: 340px; max-height: 70vh;
+  background:#fff; border:1px solid #e5e7eb; border-radius: 12px;
+  box-shadow: 0 18px 36px rgba(0,0,0,.18); display:none; overflow:hidden;
+}
+.chatbot-header{
+  background: var(--paragon-blue); color:#fff; padding:12px 16px; display:flex; align-items:center; justify-content:space-between;
+}
+.chatbot-body{ padding:12px 12px 4px; max-height: 50vh; overflow:auto; }
+.chatbot-input{ display:flex; gap:8px; padding:12px; border-top:1px solid #e5e7eb; }
+.chatbot-input input{ flex:1; border:1px solid #d1d5db; border-radius: 8px; padding:8px 10px; }
+.chatbot-input button{ background: var(--paragon-blue); color:#fff; border:none; border-radius: 8px; padding:8px 12px; cursor:pointer; }
+.chatbot-input button:hover{ background: var(--paragon-light-blue); }
+
+/* ========== Responsive ========== */
+@media (max-width: 768px){
+  body { font-size: 16px; }
+  .hero-title { font-size: 2.25rem !important; }
+  .client-logo { height:40px; }
+}
