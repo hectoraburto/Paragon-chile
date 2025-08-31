@@ -1,242 +1,116 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Gestión Contractual - Paragon Project Partners</title>
-  <script src="https://cdn.tailwindcss.com"></script>
-  <link rel="stylesheet" href="../css/style.css">
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Nobile:wght@400;700&display=swap" rel="stylesheet">
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Gestión Contractual (CMO®) — Paragon Project Partners</title>
 
-  <!-- Seguro anti-tinte/gris para logos del carrusel -->
-  <style>
-    .client-logo, .client-logo img {
-      filter: none !important;
-      -webkit-filter: none !important;
-      mix-blend-mode: normal !important;
-      opacity: 1 !important;
-    }
-    /* Carrusel mínimo funcional coherente  */
-    .client-carousel { display:flex; gap:40px; align-items:center; animation: carousel-scroll 30s linear infinite; white-space:nowrap; }
-    .client-logo { height:48px; width:auto; object-fit:contain; display:block; }
-    .client-logo-wrapper { margin: 0 1rem; width: 12rem; height: 6rem; display:flex; align-items:center; justify-content:center; }
-    @keyframes carousel-scroll { 0%{ transform:translateX(0);} 100%{ transform:translateX(-50%);} }
-    /* Fallback si algún logo no existe, así detectas el nombre exacto que falta */
-    .logo-fallback { background:#eef2ff; color:#37497B; border:1px solid #c7d2fe; padding:10px 14px; border-radius:10px; font-weight:600; }
-  </style>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="../css/style.css"/>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Nobile:wght@400;700&display=swap" rel="stylesheet"/>
 </head>
 <body class="font-inter text-gray-800">
 
-  <!-- Header dinámico (reemplaza el <header> estático) -->
-  <div data-include="header" data-base="../"></div>
+  <header data-include="header" data-base="../"></header>
 
-  <!-- Mini-Hero Slider para servicios (igual a tu estructura) -->
-  <section id="mini-hero-contractual" class="relative w-full h-80 overflow-hidden mt-16">
-    <div class="mini-hero-slide active relative w-full h-full flex items-center justify-center">
-      <img src="../img/servicio-contractual-1.jpg" alt="Contratos y documentos" class="absolute w-full h-full object-cover">
-      <div class="absolute inset-0 bg-paragon-blue opacity-60"></div>
-      <div class="z-10 text-white text-center p-8 rounded-lg">
-        <h1 class="text-4xl md:text-5xl font-bold font-nobile">Gestión Contractual</h1>
-      </div>
-    </div>
-    <div class="mini-hero-slide relative w-full h-full hidden items-center justify-center">
-      <img src="../img/servicio-contractual-2.jpg" alt="Negociación profesional" class="absolute w-full h-full object-cover">
-      <div class="absolute inset-0 bg-paragon-blue opacity-60"></div>
-      <div class="z-10 text-white text-center p-8 rounded-lg">
-        <h1 class="text-4xl md:text-5xl font-bold font-nobile">Estrategia y Negociación</h1>
-      </div>
-    </div>
-    <div class="mini-hero-slide relative w-full h-full hidden items-center justify-center">
-      <img src="../img/servicio-contractual-3.jpg" alt="Arbitraje y resolución de conflictos" class="absolute w-full h-full object-cover">
-      <div class="absolute inset-0 bg-paragon-blue opacity-60"></div>
-      <div class="z-10 text-white text-center p-8 rounded-lg">
-        <h1 class="text-4xl md:text-5xl font-bold font-nobile">Prevención de Reclamos</h1>
-      </div>
-    </div>
-  </section>
-
-  <!-- Contenido principal (idéntico al tuyo) -->
-  <main class="container mx-auto px-4 py-12">
-    <section class="mb-12">
-      <p class="text-lg leading-relaxed mb-6">
-        En Paragon Project Partners, nos constituimos en una <strong class="text-paragon-blue">CMO® (Contract Management Office)</strong>, apoyando o desarrollando el manejo de todos los Aspectos Contractuales de sus Proyectos. Estamos presentes en todas las etapas de un proyecto, desde la definición de la Estrategia de Contrataciones hasta el Cierre de Contratos.
-      </p>
-      <p class="text-lg leading-relaxed mb-6">
-        Nuestros servicios están diseñados para optimizar la gestión de sus contratos, minimizar riesgos y prevenir conflictos, asegurando el éxito y la eficiencia de sus proyectos.
-      </p>
-    </section>
-
-    <section class="mb-12">
-      <h2 class="text-3xl font-bold text-paragon-blue mb-6 font-nobile">Ámbito de Acción Preventivo</h2>
-      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-        <div class="bg-gray-50 p-6 rounded-lg shadow-md">
-          <h3 class="text-xl font-semibold mb-3 text-paragon-dark-blue">Estrategia y Licitación</h3>
-          <ul class="list-disc list-inside text-gray-700 space-y-2">
-            <li>Selección de la modalidad Contractual más apropiada.</li>
-            <li>Definición de paquetes de Contratación para óptimo desarrollo.</li>
-            <li>Proceso de Licitación acorde a la modalidad seleccionada.</li>
-            <li>Preselección de Oferentes (Inteligencia de Mercado).</li>
-            <li>Preparación y/o Validación de Documentos de Licitación.</li>
-            <li>Evaluación de Ofertas.</li>
-            <li>Apoyo en Procesos de Negociación con Oferentes.</li>
-            <li>Elaboración y/o Validación de Contratos finales.</li>
-          </ul>
-        </div>
-        <div class="bg-gray-50 p-6 rounded-lg shadow-md">
-          <h3 class="text-xl font-semibold mb-3 text-paragon-dark-blue">Gestión Contractual Preventiva</h3>
-          <ul class="list-disc list-inside text-gray-700 space-y-2">
-            <li>Análisis de Riesgos Contractuales.</li>
-            <li>Gestión Contractual Preventiva durante el desarrollo del Contrato.</li>
-            <li>Tratamiento de correspondencia e informes de análisis de controversias.</li>
-            <li>Revisiones independientes a la Gestión Contractual en proyectos (Auditorías).</li>
-          </ul>
-        </div>
+  <main class="pt-24 pb-20">
+    <!-- Hero -->
+    <section class="relative bg-gray-900 text-white">
+      <picture>
+        <source srcset="../img/slide3.webp" type="image/webp">
+        <img src="../img/slide3.jpg" alt="Gestión Contractual" class="w-full h-[38vh] md:h-[48vh] object-cover opacity-60">
+      </picture>
+      <div class="absolute inset-0 bg-paragon-blue/50"></div>
+      <div class="container mx-auto px-4 relative py-12 md:py-16">
+        <nav class="text-sm text-white/80 mb-3">
+          <a href="../index.html" class="underline-offset-2 hover:underline">Inicio</a>
+          <span class="opacity-60"> › </span>
+          <a href="../index.html#servicios" class="underline-offset-2 hover:underline">Servicios</a>
+          <span class="opacity-60"> › </span>
+          <span class="opacity-100">Gestión Contractual</span>
+        </nav>
+        <h1 class="font-nobile text-3xl md:text-5xl font-bold">Gestión Contractual (CMO®)</h1>
+        <p class="mt-3 md:mt-4 text-white/90 max-w-3xl">
+          Administración integral de contratos, prevención de reclamos y gobernanza contractual
+          alineada a objetivos de negocio, alcance, costos, plazos y calidad.
+        </p>
+        <a href="../index.html#contacto" class="btn-primary mt-6 inline-block">Solicitar asesoría</a>
       </div>
     </section>
 
-    <section class="mb-12">
-      <h2 class="text-3xl font-bold text-paragon-blue mb-6 font-nobile">Ámbito de Acción Resolutivo</h2>
-      <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-        <div class="bg-gray-50 p-6 rounded-lg shadow-md">
-          <h3 class="text-xl font-semibold mb-3 text-paragon-dark-blue">Resolución de Controversias</h3>
-          <ul class="list-disc list-inside text-gray-700 space-y-2">
-            <li>Auditorías Contractuales.</li>
-            <li>Preparación de Informes de Diagnóstico Contractual.</li>
-            <li>Participación en Procesos de Negociación.</li>
-            <li>Preparación y/o Defensa de Reclamos.</li>
-            <li>Informes Periciales.</li>
+    <!-- Contenido -->
+    <section class="container mx-auto px-4 mt-12 grid md:grid-cols-3 gap-8">
+      <article class="md:col-span-2 space-y-10">
+        <section>
+          <h2 class="text-2xl md:text-3xl font-bold text-paragon-blue font-nobile mb-3">Qué hacemos</h2>
+          <p class="text-lg">
+            Operamos una CMO® (Contract Management Office) que articula el ciclo de vida del contrato:
+            desde la licitación y adjudicación, hasta la ejecución, control de cambios y cierre,
+            asegurando trazabilidad y evidencia oportuna.
+          </p>
+          <ul class="list-disc pl-6 mt-4 space-y-2">
+            <li>Estrategia contractual y matriz de riesgos/obligaciones (OBL/RESP).</li>
+            <li>Control de cambios: RFC/VO, hitos, pagos y eventos de impacto.</li>
+            <li>Bitácora, correspondencia, RFI/RFC y reuniones de seguimiento.</li>
+            <li>Mecanismos de resolución temprana de controversias y negociación.</li>
+            <li>Alineación Proyecto–Contrato junto a PMO® para coherencia técnico–contractual.</li>
           </ul>
-        </div>
-        <div class="bg-gray-50 p-6 rounded-lg shadow-md">
-          <h3 class="text-xl font-semibold mb-3 text-paragon-dark-blue">Apoyo en Procesos Arbitrales</h3>
-          <ul class="list-disc list-inside text-gray-700 space-y-2">
-            <li>Asesorías en la Elaboración de Estrategias para Arbitrajes.</li>
-            <li>Preparación de Escritos Técnicos-Contractuales para Demanda, Contestación, Réplica y Dúplica.</li>
-            <li>Proposición y/o revisión de Puntos de Prueba.</li>
-            <li>Preparación de la Prueba.</li>
-            <li>Observaciones a la Prueba.</li>
-          </ul>
-        </div>
-      </div>
-    </section>
+        </section>
 
-    <section>
-      <h2 class="text-3xl font-bold text-paragon-blue mb-6 font-nobile text-center">Beneficios</h2>
-      <div class="grid grid-cols-1 md:grid-cols-3 gap-8 text-center">
-        <div class="bg-white p-6 rounded-lg shadow-md border-t-4 border-paragon-blue">
-          <h3 class="text-xl font-semibold mb-2">Minimización de Riesgos</h3>
-          <p class="text-gray-700">Identificación y gestión proactiva de riesgos contractuales.</p>
+        <section>
+          <h2 class="text-2xl md:text-3xl font-bold text-paragon-blue font-nobile mb-3">Entregables y herramientas</h2>
+          <ul class="list-disc pl-6 space-y-2">
+            <li>Matriz de obligaciones y riesgos contractuales.</li>
+            <li>Plan de gestión contractual y procedimiento de cambios.</li>
+            <li>Registro de eventos, evidencias y tableros KPI.</li>
+            <li>Informes de avance contractual y reportabilidad ejecutiva.</li>
+            <li>Soporte técnico en controversias (no constituye asesoría legal).</li>
+          </ul>
+        </section>
+
+        <section>
+          <h2 class="text-2xl md:text-3xl font-bold text-paragon-blue font-nobile mb-3">Beneficios</h2>
+          <ul class="list-disc pl-6 space-y-2">
+            <li>Disminución de riesgos y reclamos por desviaciones no gestionadas.</li>
+            <li>Mayor predictibilidad de costos y plazos contractuales.</li>
+            <li>Mejora de compliance, governance y evidencia trazable.</li>
+            <li>Relaciones colaborativas con contratistas y mandantes.</li>
+          </ul>
+        </section>
+
+        <section>
+          <h2 class="text-2xl md:text-3xl font-bold text-paragon-blue font-nobile mb-3">Modalidades</h2>
+          <ul class="list-disc pl-6 space-y-2">
+            <li><strong>CMO® As a Service:</strong> célula externa con SLA y métricas.</li>
+            <li><strong>Implantación CMO® Interna:</strong> diseño, capacitación y traspaso.</li>
+            <li><strong>Intervención puntual:</strong> soporte en cambios críticos, hitos y cierres.</li>
+          </ul>
+        </section>
+      </article>
+
+      <aside class="space-y-5">
+        <div class="service-card">
+          <h3 class="text-xl font-bold mb-2">¿Buscas control de cambios?</h3>
+          <p class="mb-4">Implementamos un flujo de RFC/VO con trazabilidad y KPIs.</p>
+          <a href="../index.html#contacto" class="btn-primary w-full text-center">Conversemos</a>
         </div>
-        <div class="bg-white p-6 rounded-lg shadow-md border-t-4 border-paragon-blue">
-          <h3 class="text-xl font-semibold mb-2">Eficiencia Operacional</h3>
-          <p class="text-gray-700">Optimización de procesos de contratación y administración.</p>
+
+        <div class="service-card">
+          <h3 class="text-xl font-bold mb-2">Servicios relacionados</h3>
+          <ul class="list-disc pl-6 space-y-1">
+            <li>PMO® (Gestión de Proyectos)</li>
+            <li>Training &amp; Coaching</li>
+            <li>Auditorías y due diligence</li>
+          </ul>
         </div>
-        <div class="bg-white p-6 rounded-lg shadow-md border-t-4 border-paragon-blue">
-          <h3 class="text-xl font-semibold mb-2">Resolución Efectiva</h3>
-          <p class="text-gray-700">Soporte experto en la resolución de disputas y arbitrajes.</p>
-        </div>
-      </div>
+      </aside>
     </section>
   </main>
 
-      <section id="clientes" class="py-20 bg-gray-50 overflow-hidden">
-        <div class="container mx-auto px-4 text-center">
-            <h2 class="text-4xl font-bold text-paragon-blue mb-10 font-nobile">Nuestros Clientes Clave</h2>
-        </div>
-        <div class="client-carousel-container w-full overflow-hidden relative">
-            <div class="client-carousel flex animate-carousel-scroll">
-                <!-- Logos de Clientes (Placeholders) -->
-                <div class="client-logo-wrapper flex-shrink-0 w-48 h-24 flex items-center justify-center p-4">
-                    <img src="img/logos/bhp.png" alt="Logo BHP" class="client-logo grayscale hover:grayscale-0 transition-all duration-300 rounded-md">
-                </div>
-                <div class="client-logo-wrapper flex-shrink-0 w-48 h-24 flex items-center justify-center p-4">
-                    <img src="img/logos/anglo-american.png" alt="Logo Anglo American" class="client-logo grayscale hover:grayscale-0 transition-all duration-300 rounded-md">
-                </div>
-                <div class="client-logo-wrapper flex-shrink-0 w-48 h-24 flex items-center justify-center p-4">
-                    <img src="img/logos/enap.png" alt="Logo ENAP" class="client-logo grayscale hover:grayscale-0 transition-all duration-300 rounded-md">
-                </div>
-                <div class="client-logo-wrapper flex-shrink-0 w-48 h-24 flex items-center justify-center p-4">
-                    <img src="img/logos/LOGO-CODELCO.png" alt="Logo Codelco" class="client-logo grayscale hover:grayscale-0 transition-all duration-300 rounded-md">
-                </div>
-                <div class="client-logo-wrapper flex-shrink-0 w-48 h-24 flex items-center justify-center p-4">
-                    <img src="img/logos/Acciona_logo.svg.png" alt="Logo Acciona" class="client-logo grayscale hover:grayscale-0 transition-all duration-300 rounded-md">
-                </div>
-                <div class="client-logo-wrapper flex-shrink-0 w-48 h-24 flex items-center justify-center p-4">
-                    <img src="img/logos/siemens-logo.png" alt="Logo Siemens" class="client-logo grayscale hover:grayscale-0 transition-all duration-300 rounded-md">
-                </div>
-                <div class="client-logo-wrapper flex-shrink-0 w-48 h-24 flex items-center justify-center p-4">
-                    <img src="img/logos/logo-cmp.png" alt="Logo CMP" class="client-logo grayscale hover:grayscale-0 transition-all duration-300 rounded-md">
-                </div>
-                <div class="client-logo-wrapper flex-shrink-0 w-48 h-24 flex items-center justify-center p-4">
-                    <img src="img/logos/Eiffage.png" alt="Logo Eiffage" class="client-logo grayscale hover:grayscale-0 transition-all duration-300 rounded-md">
-                </div>
-                <div class="client-logo-wrapper flex-shrink-0 w-48 h-24 flex items-center justify-center p-4">
-                    <img src="https://placehold.co/150x80/cccccc/000000?text=Nueva+Union" alt="Logo Nueva Union" class="client-logo grayscale hover:grayscale-0 transition-all duration-300 rounded-md">
-                </div>
-                <div class="client-logo-wrapper flex-shrink-0 w-48 h-24 flex items-center justify-center p-4">
-                    <img src="img/logos/ACAP-logo.png" alt="Logo ACAP" class="client-logo grayscale hover:grayscale-0 transition-all duration-300 rounded-md">
-                </div>
-                <div class="client-logo-wrapper flex-shrink-0 w-48 h-24 flex items-center justify-center p-4">
-                    <img src="img/logos/logo-pll.png" alt="Logo Puerto Las Losas" class="client-logo grayscale hover:grayscale-0 transition-all duration-300 rounded-md">
-                </div>
-                <!-- Repetir logos para el efecto infinito -->
-                <div class="client-logo-wrapper flex-shrink-0 w-48 h-24 flex items-center justify-center p-4">
-                    <img src="img/logos/bhp.png" alt="Logo BHP" class="client-logo grayscale hover:grayscale-0 transition-all duration-300 rounded-md">
-                </div>
-                <div class="client-logo-wrapper flex-shrink-0 w-48 h-24 flex items-center justify-center p-4">
-                    <img src="img/logos/anglo-american.png" alt="Logo Anglo American" class="client-logo grayscale hover:grayscale-0 transition-all duration-300 rounded-md">
-                </div>
-                <div class="client-logo-wrapper flex-shrink-0 w-48 h-24 flex items-center justify-center p-4">
-                    <img src="img/logos/enap.png" alt="Logo ENAP" class="client-logo grayscale hover:grayscale-0 transition-all duration-300 rounded-md">
-                </div>
-                <div class="client-logo-wrapper flex-shrink-0 w-48 h-24 flex items-center justify-center p-4">
-                    <img src="img/logos/LOGO-CODELCO.png" alt="Logo Codelco" class="client-logo grayscale hover:grayscale-0 transition-all duration-300 rounded-md">
-                </div>
-                <div class="client-logo-wrapper flex-shrink-0 w-48 h-24 flex items-center justify-center p-4">
-                    <img src="img/logos/Acciona_logo.svg.png" alt="Logo Acciona" class="client-logo grayscale hover:grayscale-0 transition-all duration-300 rounded-md">
-                </div>
-                <div class="client-logo-wrapper flex-shrink-0 w-48 h-24 flex items-center justify-center p-4">
-                    <img src="img/logos/siemens-logo.png" alt="Logo Siemens" class="client-logo grayscale hover:grayscale-0 transition-all duration-300 rounded-md">
-                </div>
-                <div class="client-logo-wrapper flex-shrink-0 w-48 h-24 flex items-center justify-center p-4">
-                    <img src="img/logos/logo-cmp.png" alt="Logo CMP" class="client-logo grayscale hover:grayscale-0 transition-all duration-300 rounded-md">
-                </div>
-                <div class="client-logo-wrapper flex-shrink-0 w-48 h-24 flex items-center justify-center p-4">
-                    <img src="img/logos/Eiffage.png" alt="Logo Eiffage" class="client-logo grayscale hover:grayscale-0 transition-all duration-300 rounded-md">
-                </div>
-                <div class="client-logo-wrapper flex-shrink-0 w-48 h-24 flex items-center justify-center p-4">
-                    <img src="https://placehold.co/150x80/cccccc/000000?text=Nueva+Union" alt="Logo Nueva Union" class="client-logo grayscale hover:grayscale-0 transition-all duration-300 rounded-md">
-                </div>
-                <div class="client-logo-wrapper flex-shrink-0 w-48 h-24 flex items-center justify-center p-4">
-                    <img src="img/logos/ACAP-logo.png" alt="Logo ACAP" class="client-logo grayscale hover:grayscale-0 transition-all duration-300 rounded-md">
-                </div>
-                <div class="client-logo-wrapper flex-shrink-0 w-48 h-24 flex items-center justify-center p-4">
-                    <img src="img/logos/logo-pll.png" alt="Logo Puerto Las Losas" class="client-logo grayscale hover:grayscale-0 transition-all duration-300 rounded-md">
-                </div>
-            </div>
-        </div>
-    </section>
+  <footer data-include="footer" data-base="../"></footer>
 
-  <!-- Footer dinámico (reemplaza el <footer> estático) -->
-  <div data-include="footer" data-base="../"></div>
-
-  <!-- Scripts -->
   <script src="../js/includes.js"></script>
-  <script>
-    // Lógica del mini-hero slider para servicios
-    document.addEventListener('DOMContentLoaded', () => {
-      const slides = document.querySelectorAll('#mini-hero-contractual .mini-hero-slide');
-      let currentSlide = 0;
-      const slideInterval = 5000;
-      function showSlide(index) {
-        slides.forEach((slide, i) => {
-          slide.classList.toggle('hidden', i !== index);
-          slide.classList.toggle('active', i === index);
-        });
-      }
-      showSlide(currentSlide);
-      setInterval(() => { currentSlide = (currentSlide + 1) % slides.length; showSlide(currentSlide); }, slideInterval);
-    });
-  </script>
+  <script src="../js/main.js"></script>
+  <script src="../js/chatbot.js"></script>
 </body>
 </html>
