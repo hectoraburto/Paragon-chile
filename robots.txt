@@ -1,0 +1,12 @@
+User-agent: *
+Disallow: /admin/
+Disallow: /cgi-bin/
+
+# Asegurar acceso a recursos
+Allow: /assets/
+Allow: /img/
+Allow: /video/
+Allow: /js/
+Allow: /css/
+
+Sitemap: https://paragon-chile.cl/sitemap.xml

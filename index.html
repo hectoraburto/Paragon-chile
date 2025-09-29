@@ -1,19 +1,143 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="es-CL">
 <head>
   <meta charset="UTF-8"/>
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Paragon Project Partners - Gestión de Proyectos y Contratos</title>
 
-  <!-- Tailwind CDN -->
-  <script src="https://cdn.tailwindcss.com"></script>
+  <title>Paragon Project Partners | Gestión de Proyectos y Contratos (PMI®) en Chile</title>
+  <meta name="description" content="Somos su aliado en todas las etapas de proyectos y contratos. PMO, Gestión Contractual, Reclamos, Peritajes y Formación con metodología basada en estándares PMI® en Chile." />
+  <link rel="canonical" href="https://paragon-chile.cl/" />
+  <meta name="robots" content="index,follow,max-snippet:-1,max-image-preview:large,max-video-preview:-1" />
+  <meta name="format-detection" content="telephone=no"/>
 
-  <!-- Fuentes -->
+  <!-- Favicons / PWA -->
+  <link rel="icon" type="image/png" href="/favicon.png">
+  <link rel="icon" type="image/png" href="/favicon.png">
+  <link rel="shortcut icon" href="/favicon.ico">
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+  <link rel="icon" type="image/png" href="/favicon.png">
+  <link rel="icon" type="image/png" href="/favicon.png">
+  <link rel="manifest" href="/site.webmanifest">
+  <meta name="msapplication-TileColor" content="#37497B">
+  <meta name="msapplication-config" content="/browserconfig.xml">
+  <meta name="theme-color" content="#37497B">
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website" />
+  <meta property="og:locale" content="es_CL" />
+  <meta property="og:site_name" content="Paragon Project Partners" />
+  <meta property="og:title" content="Paragon Project Partners | Gestión de Proyectos y Contratos (PMI®)" />
+  <meta property="og:description" content="Gestión de Proyectos (PMO), Gestión Contractual, Reclamos, Peritajes y Formación. Metodología basada en PMI®." />
+  <meta property="og:url" content="https://paragon-chile.cl/" />
+  <meta property="og:image" content="https://paragon-chile.cl/img/og/paragon-og.jpg" />
+  <meta property="og:image:alt" content="Logotipo e identidad de Paragon Project Partners" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Paragon Project Partners | Gestión de Proyectos y Contratos (PMI®)" />
+  <meta name="twitter:description" content="Somos su aliado en todas las fases de proyectos y contratos." />
+  <meta name="twitter:image" content="https://paragon-chile.cl/img/og/paragon-og.jpg" />
+
+  <!-- Preconnect (rendimiento) -->
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+
+  <!-- Preloads críticos (mejora LCP) -->
+  <link rel="preload" as="image" href="/img/hero/slide2.jpg">
+  <link rel="preload" as="image" href="/img/hero/slide2.jpg">
+
+  <!-- Tailwind CDN (SUGERENCIA: compilar a CSS estático cuando puedas) -->
+<!-- Fuentes -->
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Nobile:wght@400;700&display=swap" rel="stylesheet"/>
 
   <!-- Estilos propios -->
   <link rel="stylesheet" href="css/style.css"/>
+
+  <!-- Datos estructurados (Organization + Website + Breadcrumb) -->
+<!-- Organization -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "name": "Paragon Project Partners",
+  "url": "https://paragon-chile.cl/",
+  "logo": "https://paragon-chile.cl/img/brand/logo-paragon-vector.png",
+  "email": "marcelo.diaz@paragon-chile.cl",
+  "telephone": "+56979400451",
+  "sameAs": ["https://www.linkedin.com/company/paragonprojectpartners"],
+  "contactPoint": [{
+    "@type": "ContactPoint",
+    "contactType": "sales",
+    "telephone": "+56979400451",
+    "email": "marcelo.diaz@paragon-chile.cl",
+    "areaServed": "CL"
+  }]
+}
+</script>
+
+<!-- WebSite -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type":"WebSite",
+  "@id":"https://paragon-chile.cl/#website",
+  "url":"https://paragon-chile.cl/",
+  "name":"Paragon Project Partners",
+  "inLanguage":"es-CL"
+}
+</script>
+
+<!-- BreadcrumbList -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type":"BreadcrumbList",
+  "itemListElement":[
+    {"@type":"ListItem","position":1,"name":"Inicio","item":"https://paragon-chile.cl/"},
+    {"@type":"ListItem","position":2,"name":"Servicios","item":"https://paragon-chile.cl/#servicios"},
+    {"@type":"ListItem","position":3,"name":"Contacto","item":"https://paragon-chile.cl/#contacto"}
+  ]
+}
+</script>
+
+
+<link rel="stylesheet" href="/assets/chatbot/chatbot.css">
+
+  <!-- TEMPORARY: Tailwind CDN restored while we compile local CSS -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            "paragon-blue": "#37497B",
+            "paragon-dark-blue": "#37497B",
+            "paragon-light-blue": "#5063A1"
+          }
+        }
+      }
+    };
+  </script>
+
+
+<style>
+.brand-text{display:flex;flex-direction:column;line-height:1.1}
+.brand-line1{font-weight:700;font-size:1rem;text-align:center}
+.brand-line2{font-weight:800;font-size:1.25rem;text-align:left;margin-top:2px}
+.brand-line3{font-weight:600;font-size:.95rem;text-align:left;letter-spacing:.2px}
+.site-header .brand{gap:12px;align-items:center}
+.footer-logo{max-width:160px;height:auto;margin-bottom:8px;display:block;filter:drop-shadow(0 6px 12px rgba(0,0,0,.08));}
+@media (min-width:960px){
+  .brand-line1{font-size:1.05rem}
+  .brand-line2{font-size:1.35rem}
+  .brand-line3{font-size:1rem}
+}
+</style>
+
 </head>
+
 <body class="font-inter text-gray-800">
   <!-- Header via parcial -->
   <header data-include="header" data-base=""></header>
@@ -22,18 +146,23 @@
     <!-- Hero Slider -->
     <section id="hero-slider" class="relative w-full h-screen overflow-hidden">
       <div class="hero-slide active relative w-full h-full flex items-center justify-center bg-black">
-        <video src="video/slide1.mp4" autoplay loop muted class="absolute w-full h-full object-cover opacity-70"></video>
-        <div class="absolute inset-0 bg-black opacity-50"></div>
+        <video src="video/slide1.mp4" autoplay loop muted playsinline preload="metadata"
+               class="absolute w-full h-full object-cover opacity-70" aria-hidden="true"></video>
+        <div class="absolute inset-0 bg-black opacity-50" aria-hidden="true"></div>
         <div class="z-10 text-white text-center p-8 rounded-lg">
           <h1 class="text-5xl md:text-6xl font-bold mb-4 font-nobile leading-tight hero-title">MANAGEMENT KNOW HOW</h1>
-          <p class="text-2xl md:text-3xl mb-8 font-nobile">PROJECTS – CONTRACTS – TRAINING & COACHING</p>
+          <p class="text-2xl md:text-3xl mb-8 font-nobile">PROJECTS – CONTRACTS – TRAINING &amp; COACHING</p>
           <a href="#contacto" class="btn-primary">Contáctanos</a>
         </div>
+        <noscript>
+          <img src="img/hero/slide2.jpg" alt="" width="1600" height="900" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;" />
+        </noscript>
       </div>
 
       <div class="hero-slide relative w-full h-full hidden items-center justify-center">
-        <img src="img/hero/slide2.jpg" alt="Infraestructura moderna" class="absolute w-full h-full object-cover"/>
-        <div class="absolute inset-0 bg-paragon-blue opacity-50"></div>
+        <img src="img/hero/slide2.jpg" alt="Infraestructura moderna" width="1600" height="900"
+             class="absolute w-full h-full object-cover"/>
+        <div class="absolute inset-0 bg-paragon-blue opacity-50" aria-hidden="true"></div>
         <div class="z-10 text-white text-center p-8 rounded-lg">
           <h2 class="text-5xl md:text-6xl font-bold mb-4 font-nobile leading-tight hero-title">Innovación en Proyectos</h2>
           <p class="text-2xl md:text-3xl mb-4 font-nobile">Soluciones vanguardistas para sus desafíos</p>
@@ -42,8 +171,9 @@
       </div>
 
       <div class="hero-slide relative w-full h-full hidden items-center justify-center">
-        <img src="img/hero/slide3.jpg" alt="Construcción y desarrollo" class="absolute w-full h-full object-cover"/>
-        <div class="absolute inset-0 bg-paragon-blue opacity-50"></div>
+        <img src="img/hero/slide3.jpg" alt="Construcción y desarrollo" width="1600" height="900"
+             class="absolute w-full h-full object-cover"/>
+        <div class="absolute inset-0 bg-paragon-blue opacity-50" aria-hidden="true"></div>
         <div class="z-10 text-white text-center p-8 rounded-lg">
           <h2 class="text-5xl md:text-6xl font-bold mb-4 font-nobile leading-tight hero-title">Expertos en Contratos</h2>
           <p class="text-2xl md:text-3xl mb-4 font-nobile">Administración y prevención de reclamos</p>
@@ -52,8 +182,9 @@
       </div>
 
       <div class="hero-slide relative w-full h-full hidden items-center justify-center">
-        <img src="img/hero/slide4.jpg" alt="Panorámica urbana" class="absolute w-full h-full object-cover"/>
-        <div class="absolute inset-0 bg-paragon-blue opacity-50"></div>
+        <img src="img/hero/slide4.jpg" alt="Panorámica urbana" width="1600" height="900"
+             class="absolute w-full h-full object-cover"/>
+        <div class="absolute inset-0 bg-paragon-blue opacity-50" aria-hidden="true"></div>
         <div class="z-10 text-white text-center p-8 rounded-lg">
           <h2 class="text-5xl md:text-6xl font-bold mb-4 font-nobile leading-tight hero-title">Formación de Líderes</h2>
           <p class="text-2xl md:text-3xl mb-8 font-nobile">Capacitación y Coaching PMI®</p>
@@ -63,33 +194,48 @@
     </section>
 
     <!-- About -->
-    <section id="about" class="py-20 bg-gray-50">
-      <div class="container mx-auto px-4 text-center">
-        <h2 class="text-4xl font-bold text-paragon-blue mb-10 font-nobile">Quiénes Somos</h2>
-        <div class="flex flex-col md:flex-row items-center justify-center md:space-x-12">
-          <div class="md:w-1/2 mb-8 md:mb-0">
-            <img src="img/brand/logo_paragon_vector.png" alt="Equipo de Paragon Project Partners" class="rounded-lg shadow-xl w-full h-auto object-cover"/>
-          </div>
-          <div class="md:w-1/2 text-left">
-            <p class="text-lg leading-relaxed mb-4">
-              Paragon Project Partners es una Empresa registrada internacionalmente en el PMI®, con operaciones en Latinoamérica,
-              principalmente en Chile.
-            </p>
-            <p class="text-lg leading-relaxed mb-4">
-              Contamos con una metodología desarrollada en base a los lineamientos y estándares del PMI®,
-              la cual ha sido aplicada en distintas organizaciones y proyectos, logrando contribuir
-              significativamente al éxito de los mismos.
-            </p>
-            <p class="text-lg leading-relaxed mb-4 font-nobile italic">
-              "Somos su aliado y lo apoyamos en todas las etapas y fases de sus proyectos y contratos, desde etapas iniciales hasta el cierre."
-            </p>
-            <p class="text-base leading-relaxed text-gray-600">
-              Como PMI® Registered Consultant N° 15-0224 (RCP) y R.E.P. # 3544, emitimos PDUs con garantía de calidad del PMI®.
-            </p>
-          </div>
+<section id="about" class="bg-gray-50 py-16">
+  <div class="container mx-auto px-4">
+    <h2 class="text-3xl md:text-4xl font-bold text-paragon-blue text-center md:text-left">
+      Quiénes Somos
+    </h2>
+
+    <div class="grid md:grid-cols-2 gap-8 md:gap-12 mt-8 items-start">
+      <!-- Bloque 1: Logo en tarjeta blanca -->
+      <div>
+        <div class="bg-white rounded-2xl shadow-xl p-6 md:p-8 ring-1 ring-black/5">
+          <img
+            src="img/brand/logo_paragon_vector.png"
+            alt="Logotipo Paragon Project Partners"
+            class="w-full h-auto object-contain"
+            width="800" height="600" loading="lazy" decoding="async">
         </div>
       </div>
-    </section>
+
+      <!-- Bloque 2: Texto (mantiene el fondo gris de la sección) -->
+      <div class="space-y-4 leading-relaxed text-gray-700">
+        <p>
+          Paragon Project Partners es una Empresa registrada internacionalmente en el PMI®, con
+          operaciones en Latinoamérica, principalmente en Chile.
+        </p>
+        <p>
+          Contamos con una metodología desarrollada bajo estándares del PMI®,
+          la cual ha sido aplicada en distintas organizaciones y proyectos, logrando contribuir
+          significativamente al éxito de los mismos.
+        </p>
+        <p class="italic text-paragon-blue/90">
+          “Somos su aliado y lo apoyamos en todas las etapas y fases de sus proyectos y contratos,
+          desde etapas iniciales hasta el cierre.”
+        </p>
+        <p class="text-sm text-gray-600">
+          Con nuestra metodoligia logramos obtener en PMI:Consultant Register Provider (RCP N° 15-0224) Register Educator Provider (REP N° 3544). 
+
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
 
     <!-- Servicios -->
     <section id="servicios" class="py-20 bg-white">
@@ -107,7 +253,7 @@
             <a href="servicios/gestion-contractual.html" class="text-paragon-blue hover:text-paragon-light-blue font-semibold transition-colors duration-300">Saber más →</a>
           </div>
           <div class="service-card">
-            <h3 class="text-2xl font-bold mb-4 font-nobile text-paragon-dark-blue">Training & Coaching</h3>
+            <h3 class="text-2xl font-bold mb-4 font-nobile text-paragon-dark-blue">Training &amp; Coaching</h3>
             <p class="text-gray-700 mb-4">Programas de formación y coaching con estándares PMI®.</p>
             <a href="servicios/training-coaching.html" class="text-paragon-blue hover:text-paragon-light-blue font-semibold transition-colors duration-300">Saber más →</a>
           </div>
@@ -127,78 +273,80 @@
       </div>
       <div class="client-carousel-container w-full overflow-hidden relative">
         <div class="client-carousel flex">
-          <!-- (logos clientes) -->
+          <!-- serie principal -->
           <div class="client-logo-wrapper flex-shrink-0 w-48 h-24 flex items-center justify-center p-4">
-            <img src="img/logos/bhp.png" alt="Logo BHP" class="client-logo rounded-md"/>
+            <img src="img/logos/bhp.png" alt="Logo BHP" width="150" height="80" loading="lazy" decoding="async" class="client-logo rounded-md"/>
           </div>
           <div class="client-logo-wrapper flex-shrink-0 w-48 h-24 flex items-center justify-center p-4">
-                    <img src="img/logos/anglo-american.png" alt="Logo Anglo American" class="client-logo grayscale hover:grayscale-0 transition-all duration-300 rounded-md">
-                </div>
-                <div class="client-logo-wrapper flex-shrink-0 w-48 h-24 flex items-center justify-center p-4">
-                    <img src="img/logos/enap.png" alt="Logo ENAP" class="client-logo grayscale hover:grayscale-0 transition-all duration-300 rounded-md">
-                </div>
-                <div class="client-logo-wrapper flex-shrink-0 w-48 h-24 flex items-center justify-center p-4">
-                    <img src="img/logos/LOGO-CODELCO.png" alt="Logo Codelco" class="client-logo grayscale hover:grayscale-0 transition-all duration-300 rounded-md">
-                </div>
-                <div class="client-logo-wrapper flex-shrink-0 w-48 h-24 flex items-center justify-center p-4">
-                    <img src="img/logos/Acciona_logo.svg.png" alt="Logo Acciona" class="client-logo grayscale hover:grayscale-0 transition-all duration-300 rounded-md">
-                </div>
-                <div class="client-logo-wrapper flex-shrink-0 w-48 h-24 flex items-center justify-center p-4">
-                    <img src="img/logos/siemens-logo.png" alt="Logo Siemens" class="client-logo grayscale hover:grayscale-0 transition-all duration-300 rounded-md">
-                </div>
-                <div class="client-logo-wrapper flex-shrink-0 w-48 h-24 flex items-center justify-center p-4">
-                    <img src="img/logos/logo-cmp.png" alt="Logo CMP" class="client-logo grayscale hover:grayscale-0 transition-all duration-300 rounded-md">
-                </div>
-                <div class="client-logo-wrapper flex-shrink-0 w-48 h-24 flex items-center justify-center p-4">
-                    <img src="img/logos/Eiffage.png" alt="Logo Eiffage" class="client-logo grayscale hover:grayscale-0 transition-all duration-300 rounded-md">
-                </div>
-                <div class="client-logo-wrapper flex-shrink-0 w-48 h-24 flex items-center justify-center p-4">
-                    <img src="https://placehold.co/150x80/cccccc/000000?text=Nueva+Union" alt="Logo Nueva Union" class="client-logo grayscale hover:grayscale-0 transition-all duration-300 rounded-md">
-                </div>
-                <div class="client-logo-wrapper flex-shrink-0 w-48 h-24 flex items-center justify-center p-4">
-                    <img src="img/logos/ACAP-logo.png" alt="Logo ACAP" class="client-logo grayscale hover:grayscale-0 transition-all duration-300 rounded-md">
-                </div>
-                <div class="client-logo-wrapper flex-shrink-0 w-48 h-24 flex items-center justify-center p-4">
-                    <img src="img/logos/logo-pll.png" alt="Logo Puerto Las Losas" class="client-logo grayscale hover:grayscale-0 transition-all duration-300 rounded-md">
-                </div>
-                <!--  logos efecto infinito -->
-                <div class="client-logo-wrapper flex-shrink-0 w-48 h-24 flex items-center justify-center p-4">
-                    <img src="img/logos/bhp.png" alt="Logo BHP" class="client-logo grayscale hover:grayscale-0 transition-all duration-300 rounded-md">
-                </div>
-                <div class="client-logo-wrapper flex-shrink-0 w-48 h-24 flex items-center justify-center p-4">
-                    <img src="img/logos/anglo-american.png" alt="Logo Anglo American" class="client-logo grayscale hover:grayscale-0 transition-all duration-300 rounded-md">
-                </div>
-                <div class="client-logo-wrapper flex-shrink-0 w-48 h-24 flex items-center justify-center p-4">
-                    <img src="img/logos/enap.png" alt="Logo ENAP" class="client-logo grayscale hover:grayscale-0 transition-all duration-300 rounded-md">
-                </div>
-                <div class="client-logo-wrapper flex-shrink-0 w-48 h-24 flex items-center justify-center p-4">
-                    <img src="img/logos/LOGO-CODELCO.png" alt="Logo Codelco" class="client-logo grayscale hover:grayscale-0 transition-all duration-300 rounded-md">
-                </div>
-                <div class="client-logo-wrapper flex-shrink-0 w-48 h-24 flex items-center justify-center p-4">
-                    <img src="img/logos/Acciona_logo.svg.png" alt="Logo Acciona" class="client-logo grayscale hover:grayscale-0 transition-all duration-300 rounded-md">
-                </div>
-                <div class="client-logo-wrapper flex-shrink-0 w-48 h-24 flex items-center justify-center p-4">
-                    <img src="img/logos/siemens-logo.png" alt="Logo Siemens" class="client-logo grayscale hover:grayscale-0 transition-all duration-300 rounded-md">
-                </div>
-                <div class="client-logo-wrapper flex-shrink-0 w-48 h-24 flex items-center justify-center p-4">
-                    <img src="img/logos/logo-cmp.png" alt="Logo CMP" class="client-logo grayscale hover:grayscale-0 transition-all duration-300 rounded-md">
-                </div>
-                <div class="client-logo-wrapper flex-shrink-0 w-48 h-24 flex items-center justify-center p-4">
-                    <img src="img/logos/Eiffage.png" alt="Logo Eiffage" class="client-logo grayscale hover:grayscale-0 transition-all duration-300 rounded-md">
-                </div>
-                <div class="client-logo-wrapper flex-shrink-0 w-48 h-24 flex items-center justify-center p-4">
-                    <img src="https://placehold.co/150x80/cccccc/000000?text=Nueva+Union" alt="Logo Nueva Union" class="client-logo grayscale hover:grayscale-0 transition-all duration-300 rounded-md">
-                </div>
-                <div class="client-logo-wrapper flex-shrink-0 w-48 h-24 flex items-center justify-center p-4">
-                    <img src="img/logos/ACAP-logo.png" alt="Logo ACAP" class="client-logo grayscale hover:grayscale-0 transition-all duration-300 rounded-md">
-                </div>
-                <div class="client-logo-wrapper flex-shrink-0 w-48 h-24 flex items-center justify-center p-4">
-                    <img src="img/logos/logo-pll.png" alt="Logo Puerto Las Losas" class="client-logo grayscale hover:grayscale-0 transition-all duration-300 rounded-md">
-                </div>
-            </div>
-        </div>
-    </section>
+            <img src="img/logos/anglo-american.png" alt="Logo Anglo American" width="150" height="80" loading="lazy" decoding="async" class="client-logo grayscale hover:grayscale-0 transition-all duration-300 rounded-md">
+          </div>
+          <div class="client-logo-wrapper flex-shrink-0 w-48 h-24 flex items-center justify-center p-4">
+            <img src="img/logos/enap.png" alt="Logo ENAP" width="150" height="80" loading="lazy" decoding="async" class="client-logo grayscale hover:grayscale-0 transition-all duration-300 rounded-md">
+          </div>
+          <div class="client-logo-wrapper flex-shrink-0 w-48 h-24 flex items-center justify-center p-4">
+            <img src="img/logos/LOGO-CODELCO.png" alt="Logo Codelco" width="150" height="80" loading="lazy" decoding="async" class="client-logo grayscale hover:grayscale-0 transition-all duration-300 rounded-md">
+          </div>
+          <div class="client-logo-wrapper flex-shrink-0 w-48 h-24 flex items-center justify-center p-4">
+            <img src="img/logos/Acciona_logo.svg.png" alt="Logo Acciona" width="150" height="80" loading="lazy" decoding="async" class="client-logo grayscale hover:grayscale-0 transition-all duration-300 rounded-md">
+          </div>
+          <div class="client-logo-wrapper flex-shrink-0 w-48 h-24 flex items-center justify-center p-4">
+            <img src="img/logos/siemens-logo.png" alt="Logo Siemens" width="150" height="80" loading="lazy" decoding="async" class="client-logo grayscale hover:grayscale-0 transition-all duration-300 rounded-md">
+          </div>
+          <div class="client-logo-wrapper flex-shrink-0 w-48 h-24 flex items-center justify-center p-4">
+            <img src="img/logos/logo-cmp.png" alt="Logo CMP" width="150" height="80" loading="lazy" decoding="async" class="client-logo grayscale hover:grayscale-0 transition-all duration-300 rounded-md">
+          </div>
+          <div class="client-logo-wrapper flex-shrink-0 w-48 h-24 flex items-center justify-center p-4">
+            <img src="img/logos/Eiffage.png" alt="Logo Eiffage" width="150" height="80" loading="lazy" decoding="async" class="client-logo grayscale hover:grayscale-0 transition-all duration-300 rounded-md">
+          </div>
+          <div class="client-logo-wrapper flex-shrink-0 w-48 h-24 flex items-center justify-center p-4">
+            <img src="data:image/svg+xml;charset=UTF-8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20width%3D%22150%22%20height%3D%2280%22%3E%0A%20%20%3Crect%20width%3D%22150%22%20height%3D%2280%22%20fill%3D%22%23cccccc%22/%3E%0A%20%20%3Ctext%20x%3D%2275%22%20y%3D%2245%22%20font-family%3D%22Arial%2C%20Helvetica%2C%20sans-serif%22%20font-size%3D%2214%22%20fill%3D%22%23000000%22%20text-anchor%3D%22middle%22%3ENUEVA%20UNI%C3%93N%3C/text%3E%0A%3C/svg%3E" alt="Logo Nueva Union" width="150" height="80" loading="lazy" decoding="async" class="client-logo grayscale hover:grayscale-0 transition-all duration-300 rounded-md">
+          </div>
+          <div class="client-logo-wrapper flex-shrink-0 w-48 h-24 flex items-center justify-center p-4">
+            <img src="img/logos/ACAP-logo.png" alt="Logo ACAP" width="150" height="80" loading="lazy" decoding="async" class="client-logo grayscale hover:grayscale-0 transition-all duration-300 rounded-md">
+          </div>
+          <div class="client-logo-wrapper flex-shrink-0 w-48 h-24 flex items-center justify-center p-4">
+            <img src="img/logos/logo-pll.png" alt="Logo Puerto Las Losas" width="150" height="80" loading="lazy" decoding="async" class="client-logo grayscale hover:grayscale-0 transition-all duration-300 rounded-md">
+          </div>
 
+          <!-- duplicados para efecto infinito: ocultos a SEO/lectores -->
+          <div aria-hidden="true" class="contents">
+            <div class="client-logo-wrapper flex-shrink-0 w-48 h-24 flex items-center justify-center p-4">
+              <img src="img/logos/bhp.png" alt="" width="150" height="80" class="client-logo grayscale hover:grayscale-0 transition-all duration-300 rounded-md">
+            </div>
+            <div class="client-logo-wrapper flex-shrink-0 w-48 h-24 flex items-center justify-center p-4">
+              <img src="img/logos/anglo-american.png" alt="" width="150" height="80" class="client-logo grayscale hover:grayscale-0 transition-all duration-300 rounded-md">
+            </div>
+            <div class="client-logo-wrapper flex-shrink-0 w-48 h-24 flex items-center justify-center p-4">
+              <img src="img/logos/enap.png" alt="" width="150" height="80" class="client-logo grayscale hover:grayscale-0 transition-all duration-300 rounded-md">
+            </div>
+            <div class="client-logo-wrapper flex-shrink-0 w-48 h-24 flex items-center justify-center p-4">
+              <img src="img/logos/LOGO-CODELCO.png" alt="" width="150" height="80" class="client-logo grayscale hover:grayscale-0 transition-all duration-300 rounded-md">
+            </div>
+            <div class="client-logo-wrapper flex-shrink-0 w-48 h-24 flex items-center justify-center p-4">
+              <img src="img/logos/Acciona_logo.svg.png" alt="" width="150" height="80" class="client-logo grayscale hover:grayscale-0 transition-all duration-300 rounded-md">
+            </div>
+            <div class="client-logo-wrapper flex-shrink-0 w-48 h-24 flex items-center justify-center p-4">
+              <img src="img/logos/siemens-logo.png" alt="" width="150" height="80" class="client-logo grayscale hover:grayscale-0 transition-all duration-300 rounded-md">
+            </div>
+            <div class="client-logo-wrapper flex-shrink-0 w-48 h-24 flex items-center justify-center p-4">
+              <img src="img/logos/logo-cmp.png" alt="" width="150" height="80" class="client-logo grayscale hover:grayscale-0 transition-all duration-300 rounded-md">
+            </div>
+            <div class="client-logo-wrapper flex-shrink-0 w-48 h-24 flex items-center justify-center p-4">
+              <img src="img/logos/Eiffage.png" alt="" width="150" height="80" class="client-logo grayscale hover:grayscale-0 transition-all duration-300 rounded-md">
+            </div>
+            <div class="client-logo-wrapper flex-shrink-0 w-48 h-24 flex items-center justify-center p-4">
+              <img src="data:image/svg+xml;charset=UTF-8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20width%3D%22150%22%20height%3D%2280%22%3E%0A%20%20%3Crect%20width%3D%22150%22%20height%3D%2280%22%20fill%3D%22%23cccccc%22/%3E%0A%20%20%3Ctext%20x%3D%2275%22%20y%3D%2245%22%20font-family%3D%22Arial%2C%20Helvetica%2C%20sans-serif%22%20font-size%3D%2214%22%20fill%3D%22%23000000%22%20text-anchor%3D%22middle%22%3ENUEVA%20UNI%C3%93N%3C/text%3E%0A%3C/svg%3E" alt="" width="150" height="80" class="client-logo grayscale hover:grayscale-0 transition-all duration-300 rounded-md">
+            </div>
+            <div class="client-logo-wrapper flex-shrink-0 w-48 h-24 flex items-center justify-center p-4">
+              <img src="img/logos/ACAP-logo.png" alt="" width="150" height="80" class="client-logo grayscale hover:grayscale-0 transition-all duration-300 rounded-md">
+            </div>
+            <div class="client-logo-wrapper flex-shrink-0 w-48 h-24 flex items-center justify-center p-4">
+              <img src="img/logos/logo-pll.png" alt="" width="150" height="80" class="client-logo grayscale hover:grayscale-0 transition-all duration-300 rounded-md">
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
 
     <!-- Contacto -->
     <section id="contacto" class="py-20 bg-white">
@@ -207,28 +355,46 @@
         <p class="text-lg text-gray-700 mb-8">¿Tienes un proyecto en mente? Déjanos un mensaje y te contactaremos.</p>
         <div class="max-w-4xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-8 bg-gray-50 p-8 rounded-lg shadow-lg">
           <div class="order-2 md:order-1">
-            <form class="space-y-6">
+            <form id="contacto-form" class="space-y-6" method="POST" action="/contacto.php" novalidate>
               <div>
-                <label for="name" class="block text-left text-gray-700 font-semibold mb-2">Nombre Completo</label>
-                <input id="name" class="w-full p-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-paragon-blue" placeholder="Tu nombre" required/>
+                <label for="full-name" class="block text-left text-gray-700 font-semibold mb-2">Nombre Completo</label>
+                <input id="full-name" name="nombre" autocomplete="name"
+                  class="w-full p-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-paragon-blue"
+                  placeholder="Tu nombre" required />
               </div>
               <div>
-                <label for="email" class="block text-left text-gray-700 font-semibold mb-2">Correo Electrónico</label>
-                <input id="email" type="email" class="w-full p-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-paragon-blue" placeholder="tu.email@ejemplo.com" required/>
+                <label for="email-address" class="block text-left text-gray-700 font-semibold mb-2">Correo Electrónico</label>
+                <input id="email-address" name="email" type="email" autocomplete="email"
+                  class="w-full p-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-paragon-blue"
+                  placeholder="tu.email@ejemplo.com" required />
               </div>
               <div>
-                <label for="phone" class="block text-left text-gray-700 font-semibold mb-2">Número de Teléfono</label>
-                <input id="phone" class="w-full p-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-paragon-blue" placeholder="+56 9 1234 5678"/>
+                <label for="phone-number" class="block text-left text-gray-700 font-semibold mb-2">Número de Teléfono</label>
+                <input id="phone-number" name="telefono" type="tel" autocomplete="tel"
+                  inputmode="tel" pattern="^[0-9+()\\s-]{6,}$"
+                  class="w-full p-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-paragon-blue"
+                  placeholder="+56 9 1234 5678" />
               </div>
               <div>
-                <label for="message" class="block text-left text-gray-700 font-semibold mb-2">Mensaje</label>
-                <textarea id="message" rows="5" class="w-full p-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-paragon-blue" placeholder="Describe tu consulta..." required></textarea>
+                <label for="message-text" class="block text-left text-gray-700 font-semibold mb-2">Mensaje</label>
+                <textarea id="message-text" name="mensaje" rows="5" autocomplete="off"
+                  class="w-full p-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-paragon-blue"
+                  placeholder="Describe tu consulta..." required></textarea>
               </div>
-              <button type="submit" class="btn-primary w-full py-3 rounded-md">Enviar Mensaje</button>
+
+              <!-- Honeypot antispam -->
+              <input type="text" name="empresa" tabindex="-1" autocomplete="off"
+                     style="position:absolute;left:-9999px;height:0;width:0;opacity:0;" />
+
+              <button id="contact-submit" type="submit" class="btn-primary w-full py-3 rounded-md">
+                Enviar Mensaje
+              </button>
             </form>
           </div>
           <div class="order-1 md:order-2 flex items-center justify-center">
-            <img src="img/about/about-team.jpg" alt="Imagen de gestión y colaboración" class="rounded-lg shadow-md w-full h-auto object-cover"/>
+            <img src="img/about/about-team.jpg" alt="Imagen de gestión y colaboración"
+                 width="800" height="600" loading="lazy" decoding="async"
+                 class="rounded-lg shadow-md w-full h-auto object-cover"/>
           </div>
         </div>
       </div>
@@ -238,12 +404,14 @@
   <!-- Footer via parcial -->
   <footer data-include="footer" data-base=""></footer>
 
-  <!-- Scripts -->
-   <script src="js/kb.js"></script>
-   <script src="js/chatbot.js"></script>
+  <!-- Scripts (no críticos) -->
+  <script src="js/kb.js" defer></script>
+<script src="/js/includes.js"></script>
+<script src="/js/nav.js" defer></script>
 
-  <script src="js/includes.js"></script>
-  <script src="js/main.js"></script>
-  <script src="js/chatbot.js"></script>
+  <script src="js/main.js" defer></script>
+  <script src="js/contacto.js" defer></script>
+
+<script defer src="/assets/chatbot/chatbot.js"></script>
 </body>
 </html>

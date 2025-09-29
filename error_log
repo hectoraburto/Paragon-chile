@@ -1,0 +1,627 @@
+[03-Sep-2025 20:02:37 America/Santiago] Mailer Error: SMTP Error: Could not authenticate.
+[03-Sep-2025 20:07:37 America/Santiago] Mailer Error: SMTP Error: Could not authenticate.
+[04-Sep-2025 00:43:41 America/Santiago] SERVER -> CLIENT: 220-pyme128.pymedns.net ESMTP Exim 4.98.2 #2 Wed, 03 Sep 2025 23:43:41 -0400 
+220-We do not authorize the use of this system to transport unsolicited, 
+220 and/or bulk e-mail.
+
+[04-Sep-2025 00:43:41 America/Santiago] CLIENT -> SERVER: EHLO paragon-chile.cl
+
+[04-Sep-2025 00:43:41 America/Santiago] SERVER -> CLIENT: 250-pyme128.pymedns.net Hello paragon-chile.cl [186.64.114.95]
+250-SIZE 52428800
+250-LIMITS MAILMAX=1000 RCPTMAX=50000
+250-8BITMIME
+250-PIPELINING
+250-PIPECONNECT
+250-AUTH PLAIN LOGIN
+250 HELP
+
+[04-Sep-2025 00:43:41 America/Santiago] CLIENT -> SERVER: AUTH LOGIN
+
+[04-Sep-2025 00:43:41 America/Santiago] SERVER -> CLIENT: 334 VXNlcm5hbWU6
+
+[04-Sep-2025 00:43:41 America/Santiago] CLIENT -> SERVER: [credentials hidden]
+[04-Sep-2025 00:43:41 America/Santiago] SERVER -> CLIENT: 334 UGFzc3dvcmQ6
+
+[04-Sep-2025 00:43:41 America/Santiago] CLIENT -> SERVER: [credentials hidden]
+[04-Sep-2025 00:43:41 America/Santiago] SERVER -> CLIENT: 235 Authentication succeeded
+
+[04-Sep-2025 00:43:41 America/Santiago] CLIENT -> SERVER: MAIL FROM:<info@paragon-chile.cl>
+
+[04-Sep-2025 00:43:41 America/Santiago] SERVER -> CLIENT: 250 OK
+
+[04-Sep-2025 00:43:41 America/Santiago] CLIENT -> SERVER: RCPT TO:<info@paragon-chile.cl>
+
+[04-Sep-2025 00:43:41 America/Santiago] SERVER -> CLIENT: 250 Accepted
+
+[04-Sep-2025 00:43:41 America/Santiago] CLIENT -> SERVER: RCPT TO:<hector.aburto@gmail.com>
+
+[04-Sep-2025 00:43:42 America/Santiago] SERVER -> CLIENT: 250 Accepted
+
+[04-Sep-2025 00:43:42 America/Santiago] CLIENT -> SERVER: DATA
+
+[04-Sep-2025 00:43:42 America/Santiago] SERVER -> CLIENT: 354 Enter message, ending with "." on a line by itself
+
+[04-Sep-2025 00:43:42 America/Santiago] CLIENT -> SERVER: Date: Thu, 4 Sep 2025 00:43:41 -0300
+
+[04-Sep-2025 00:43:42 America/Santiago] CLIENT -> SERVER: To: info@paragon-chile.cl
+
+[04-Sep-2025 00:43:42 America/Santiago] CLIENT -> SERVER: From: Sitio Web Paragon <info@paragon-chile.cl>
+
+[04-Sep-2025 00:43:42 America/Santiago] CLIENT -> SERVER: Reply-To: =?iso-8859-1?Q?H=C3=A9ctor_Manuel_Aburto_Donoso?= <hector.aburto@gmail.com>
+
+[04-Sep-2025 00:43:42 America/Santiago] CLIENT -> SERVER: Subject: Nuevo contacto desde el sitio web
+
+[04-Sep-2025 00:43:42 America/Santiago] CLIENT -> SERVER: Message-ID: <AaijN92bkua2wqx4RupWwCjc7hSI68WfMQXhUUXDg@paragon-chile.cl>
+
+[04-Sep-2025 00:43:42 America/Santiago] CLIENT -> SERVER: X-Mailer: PHPMailer 6.10.0 (https://github.com/PHPMailer/PHPMailer)
+
+[04-Sep-2025 00:43:42 America/Santiago] CLIENT -> SERVER: MIME-Version: 1.0
+
+[04-Sep-2025 00:43:42 America/Santiago] CLIENT -> SERVER: Content-Type: multipart/alternative;
+
+[04-Sep-2025 00:43:42 America/Santiago] CLIENT -> SERVER:  boundary="b1=_AaijN92bkua2wqx4RupWwCjc7hSI68WfMQXhUUXDg"
+
+[04-Sep-2025 00:43:42 America/Santiago] CLIENT -> SERVER: Content-Transfer-Encoding: 8bit
+
+[04-Sep-2025 00:43:42 America/Santiago] CLIENT -> SERVER: 
+
+[04-Sep-2025 00:43:42 America/Santiago] CLIENT -> SERVER: --b1=_AaijN92bkua2wqx4RupWwCjc7hSI68WfMQXhUUXDg
+
+[04-Sep-2025 00:43:42 America/Santiago] CLIENT -> SERVER: Content-Type: text/plain; charset=iso-8859-1
+
+[04-Sep-2025 00:43:42 America/Santiago] CLIENT -> SERVER: Content-Transfer-Encoding: 8bit
+
+[04-Sep-2025 00:43:42 America/Santiago] CLIENT -> SERVER: 
+
+[04-Sep-2025 00:43:42 America/Santiago] CLIENT -> SERVER: Nuevo contacto desde el sitio web
+
+[04-Sep-2025 00:43:42 America/Santiago] CLIENT -> SERVER: Nombre: Héctor Manuel Aburto Donoso
+
+[04-Sep-2025 00:43:42 America/Santiago] CLIENT -> SERVER: Email: hector.aburto@gmail.com
+
+[04-Sep-2025 00:43:42 America/Santiago] CLIENT -> SERVER: Teléfono: +56975280566
+
+[04-Sep-2025 00:43:42 America/Santiago] CLIENT -> SERVER: 
+
+[04-Sep-2025 00:43:42 America/Santiago] CLIENT -> SERVER: Mensaje:
+
+[04-Sep-2025 00:43:42 America/Santiago] CLIENT -> SERVER: prueba 2343
+
+[04-Sep-2025 00:43:42 America/Santiago] CLIENT -> SERVER: 
+
+[04-Sep-2025 00:43:42 America/Santiago] CLIENT -> SERVER: --b1=_AaijN92bkua2wqx4RupWwCjc7hSI68WfMQXhUUXDg
+
+[04-Sep-2025 00:43:42 America/Santiago] CLIENT -> SERVER: Content-Type: text/html; charset=iso-8859-1
+
+[04-Sep-2025 00:43:42 America/Santiago] CLIENT -> SERVER: Content-Transfer-Encoding: 8bit
+
+[04-Sep-2025 00:43:42 America/Santiago] CLIENT -> SERVER: 
+
+[04-Sep-2025 00:43:42 America/Santiago] CLIENT -> SERVER: 
+
+[04-Sep-2025 00:43:42 America/Santiago] CLIENT -> SERVER:   <h2>Nuevo contacto desde el sitio web</h2>
+
+[04-Sep-2025 00:43:42 America/Santiago] CLIENT -> SERVER:   <p><b>Nombre:</b> H&eacute;ctor Manuel Aburto Donoso</p>
+
+[04-Sep-2025 00:43:42 America/Santiago] CLIENT -> SERVER:   <p><b>Email:</b> hector.aburto@gmail.com</p>
+
+[04-Sep-2025 00:43:42 America/Santiago] CLIENT -> SERVER:   <p><b>Teléfono:</b> +56975280566</p>
+
+[04-Sep-2025 00:43:42 America/Santiago] CLIENT -> SERVER:   <p><b>Mensaje:</b><br>prueba 2343</p>
+
+[04-Sep-2025 00:43:42 America/Santiago] CLIENT -> SERVER: 
+
+[04-Sep-2025 00:43:42 America/Santiago] CLIENT -> SERVER: 
+
+[04-Sep-2025 00:43:42 America/Santiago] CLIENT -> SERVER: --b1=_AaijN92bkua2wqx4RupWwCjc7hSI68WfMQXhUUXDg--
+
+[04-Sep-2025 00:43:42 America/Santiago] CLIENT -> SERVER: 
+
+[04-Sep-2025 00:43:42 America/Santiago] CLIENT -> SERVER: .
+
+[04-Sep-2025 00:43:46 America/Santiago] SERVER -> CLIENT: 250 OK id=1uu0sw-00000008aWl-00iw
+
+[04-Sep-2025 00:43:46 America/Santiago] CLIENT -> SERVER: QUIT
+
+[04-Sep-2025 00:43:46 America/Santiago] SERVER -> CLIENT: 221 pyme128.pymedns.net closing connection
+
+[04-Sep-2025 01:59:46 America/Santiago] SERVER -> CLIENT: 220-pyme128.pymedns.net ESMTP Exim 4.98.2 #2 Thu, 04 Sep 2025 00:59:46 -0400 
+220-We do not authorize the use of this system to transport unsolicited, 
+220 and/or bulk e-mail.
+
+[04-Sep-2025 01:59:46 America/Santiago] CLIENT -> SERVER: EHLO paragon-chile.cl
+
+[04-Sep-2025 01:59:46 America/Santiago] SERVER -> CLIENT: 250-pyme128.pymedns.net Hello paragon-chile.cl [186.64.114.95]
+250-SIZE 52428800
+250-LIMITS MAILMAX=1000 RCPTMAX=50000
+250-8BITMIME
+250-PIPELINING
+250-PIPECONNECT
+250-AUTH PLAIN LOGIN
+250 HELP
+
+[04-Sep-2025 01:59:46 America/Santiago] CLIENT -> SERVER: AUTH LOGIN
+
+[04-Sep-2025 01:59:46 America/Santiago] SERVER -> CLIENT: 334 VXNlcm5hbWU6
+
+[04-Sep-2025 01:59:46 America/Santiago] CLIENT -> SERVER: [credentials hidden]
+[04-Sep-2025 01:59:46 America/Santiago] SERVER -> CLIENT: 334 UGFzc3dvcmQ6
+
+[04-Sep-2025 01:59:46 America/Santiago] CLIENT -> SERVER: [credentials hidden]
+[04-Sep-2025 01:59:46 America/Santiago] SERVER -> CLIENT: 235 Authentication succeeded
+
+[04-Sep-2025 01:59:46 America/Santiago] CLIENT -> SERVER: MAIL FROM:<info@paragon-chile.cl>
+
+[04-Sep-2025 01:59:46 America/Santiago] SERVER -> CLIENT: 250 OK
+
+[04-Sep-2025 01:59:46 America/Santiago] CLIENT -> SERVER: RCPT TO:<info@paragon-chile.cl>
+
+[04-Sep-2025 01:59:46 America/Santiago] SERVER -> CLIENT: 250 Accepted
+
+[04-Sep-2025 01:59:46 America/Santiago] CLIENT -> SERVER: RCPT TO:<hector.aburto@gmail.com>
+
+[04-Sep-2025 01:59:46 America/Santiago] SERVER -> CLIENT: 250 Accepted
+
+[04-Sep-2025 01:59:46 America/Santiago] CLIENT -> SERVER: DATA
+
+[04-Sep-2025 01:59:46 America/Santiago] SERVER -> CLIENT: 354 Enter message, ending with "." on a line by itself
+
+[04-Sep-2025 01:59:46 America/Santiago] CLIENT -> SERVER: Date: Thu, 4 Sep 2025 01:59:46 -0300
+
+[04-Sep-2025 01:59:46 America/Santiago] CLIENT -> SERVER: To: info@paragon-chile.cl
+
+[04-Sep-2025 01:59:46 America/Santiago] CLIENT -> SERVER: From: Sitio Web Paragon <info@paragon-chile.cl>
+
+[04-Sep-2025 01:59:46 America/Santiago] CLIENT -> SERVER: Reply-To: =?iso-8859-1?Q?H=C3=A9ctor_Manuel_Aburto_Donoso?= <hector.aburto@gmail.com>
+
+[04-Sep-2025 01:59:46 America/Santiago] CLIENT -> SERVER: Subject: Nuevo contacto desde el sitio web
+
+[04-Sep-2025 01:59:46 America/Santiago] CLIENT -> SERVER: Message-ID: <5oZgST9oucp3P1SC9ijbnK9tWFM0gATNXYtq4arhi2Y@paragon-chile.cl>
+
+[04-Sep-2025 01:59:46 America/Santiago] CLIENT -> SERVER: X-Mailer: PHPMailer 6.10.0 (https://github.com/PHPMailer/PHPMailer)
+
+[04-Sep-2025 01:59:46 America/Santiago] CLIENT -> SERVER: MIME-Version: 1.0
+
+[04-Sep-2025 01:59:46 America/Santiago] CLIENT -> SERVER: Content-Type: multipart/alternative;
+
+[04-Sep-2025 01:59:46 America/Santiago] CLIENT -> SERVER:  boundary="b1=_5oZgST9oucp3P1SC9ijbnK9tWFM0gATNXYtq4arhi2Y"
+
+[04-Sep-2025 01:59:46 America/Santiago] CLIENT -> SERVER: Content-Transfer-Encoding: 8bit
+
+[04-Sep-2025 01:59:46 America/Santiago] CLIENT -> SERVER: 
+
+[04-Sep-2025 01:59:46 America/Santiago] CLIENT -> SERVER: --b1=_5oZgST9oucp3P1SC9ijbnK9tWFM0gATNXYtq4arhi2Y
+
+[04-Sep-2025 01:59:46 America/Santiago] CLIENT -> SERVER: Content-Type: text/plain; charset=iso-8859-1
+
+[04-Sep-2025 01:59:46 America/Santiago] CLIENT -> SERVER: Content-Transfer-Encoding: 8bit
+
+[04-Sep-2025 01:59:46 America/Santiago] CLIENT -> SERVER: 
+
+[04-Sep-2025 01:59:46 America/Santiago] CLIENT -> SERVER: Nuevo contacto desde el sitio web
+
+[04-Sep-2025 01:59:46 America/Santiago] CLIENT -> SERVER: Nombre: Héctor Manuel Aburto Donoso
+
+[04-Sep-2025 01:59:46 America/Santiago] CLIENT -> SERVER: Email: hector.aburto@gmail.com
+
+[04-Sep-2025 01:59:46 America/Santiago] CLIENT -> SERVER: Teléfono: +56975280566
+
+[04-Sep-2025 01:59:46 America/Santiago] CLIENT -> SERVER: 
+
+[04-Sep-2025 01:59:46 America/Santiago] CLIENT -> SERVER: Mensaje:
+
+[04-Sep-2025 01:59:46 America/Santiago] CLIENT -> SERVER: 0059
+
+[04-Sep-2025 01:59:46 America/Santiago] CLIENT -> SERVER: 
+
+[04-Sep-2025 01:59:46 America/Santiago] CLIENT -> SERVER: --b1=_5oZgST9oucp3P1SC9ijbnK9tWFM0gATNXYtq4arhi2Y
+
+[04-Sep-2025 01:59:46 America/Santiago] CLIENT -> SERVER: Content-Type: text/html; charset=iso-8859-1
+
+[04-Sep-2025 01:59:46 America/Santiago] CLIENT -> SERVER: Content-Transfer-Encoding: 8bit
+
+[04-Sep-2025 01:59:46 America/Santiago] CLIENT -> SERVER: 
+
+[04-Sep-2025 01:59:46 America/Santiago] CLIENT -> SERVER: 
+
+[04-Sep-2025 01:59:46 America/Santiago] CLIENT -> SERVER:   <h2>Nuevo contacto desde el sitio web</h2>
+
+[04-Sep-2025 01:59:46 America/Santiago] CLIENT -> SERVER:   <p><b>Nombre:</b> H&eacute;ctor Manuel Aburto Donoso</p>
+
+[04-Sep-2025 01:59:46 America/Santiago] CLIENT -> SERVER:   <p><b>Email:</b> hector.aburto@gmail.com</p>
+
+[04-Sep-2025 01:59:46 America/Santiago] CLIENT -> SERVER:   <p><b>Teléfono:</b> +56975280566</p>
+
+[04-Sep-2025 01:59:46 America/Santiago] CLIENT -> SERVER:   <p><b>Mensaje:</b><br>0059</p>
+
+[04-Sep-2025 01:59:46 America/Santiago] CLIENT -> SERVER: 
+
+[04-Sep-2025 01:59:46 America/Santiago] CLIENT -> SERVER: 
+
+[04-Sep-2025 01:59:46 America/Santiago] CLIENT -> SERVER: --b1=_5oZgST9oucp3P1SC9ijbnK9tWFM0gATNXYtq4arhi2Y--
+
+[04-Sep-2025 01:59:46 America/Santiago] CLIENT -> SERVER: 
+
+[04-Sep-2025 01:59:46 America/Santiago] CLIENT -> SERVER: .
+
+[04-Sep-2025 01:59:51 America/Santiago] SERVER -> CLIENT: 250 OK id=1uu24Y-00000008zI2-1GNE
+
+[04-Sep-2025 01:59:51 America/Santiago] CLIENT -> SERVER: QUIT
+
+[04-Sep-2025 01:59:51 America/Santiago] SERVER -> CLIENT: 221 pyme128.pymedns.net closing connection
+
+[04-Sep-2025 17:20:10 America/Santiago] SERVER -> CLIENT: 220-pyme128.pymedns.net ESMTP Exim 4.98.2 #2 Thu, 04 Sep 2025 16:20:10 -0400 
+220-We do not authorize the use of this system to transport unsolicited, 
+220 and/or bulk e-mail.
+
+[04-Sep-2025 17:20:10 America/Santiago] CLIENT -> SERVER: EHLO paragon-chile.cl
+
+[04-Sep-2025 17:20:10 America/Santiago] SERVER -> CLIENT: 250-pyme128.pymedns.net Hello paragon-chile.cl [186.64.114.95]
+250-SIZE 52428800
+250-LIMITS MAILMAX=1000 RCPTMAX=50000
+250-8BITMIME
+250-PIPELINING
+250-PIPECONNECT
+250-AUTH PLAIN LOGIN
+250 HELP
+
+[04-Sep-2025 17:20:10 America/Santiago] CLIENT -> SERVER: AUTH LOGIN
+
+[04-Sep-2025 17:20:10 America/Santiago] SERVER -> CLIENT: 334 VXNlcm5hbWU6
+
+[04-Sep-2025 17:20:10 America/Santiago] CLIENT -> SERVER: [credentials hidden]
+[04-Sep-2025 17:20:10 America/Santiago] SERVER -> CLIENT: 334 UGFzc3dvcmQ6
+
+[04-Sep-2025 17:20:10 America/Santiago] CLIENT -> SERVER: [credentials hidden]
+[04-Sep-2025 17:20:11 America/Santiago] SERVER -> CLIENT: 235 Authentication succeeded
+
+[04-Sep-2025 17:20:11 America/Santiago] CLIENT -> SERVER: MAIL FROM:<info@paragon-chile.cl>
+
+[04-Sep-2025 17:20:11 America/Santiago] SERVER -> CLIENT: 250 OK
+
+[04-Sep-2025 17:20:11 America/Santiago] CLIENT -> SERVER: RCPT TO:<info@paragon-chile.cl>
+
+[04-Sep-2025 17:20:11 America/Santiago] SERVER -> CLIENT: 250 Accepted
+
+[04-Sep-2025 17:20:11 America/Santiago] CLIENT -> SERVER: RCPT TO:<hector.aburto@gmail.com>
+
+[04-Sep-2025 17:20:11 America/Santiago] SERVER -> CLIENT: 250 Accepted
+
+[04-Sep-2025 17:20:11 America/Santiago] CLIENT -> SERVER: DATA
+
+[04-Sep-2025 17:20:11 America/Santiago] SERVER -> CLIENT: 354 Enter message, ending with "." on a line by itself
+
+[04-Sep-2025 17:20:11 America/Santiago] CLIENT -> SERVER: Date: Thu, 4 Sep 2025 17:20:10 -0300
+
+[04-Sep-2025 17:20:11 America/Santiago] CLIENT -> SERVER: To: info@paragon-chile.cl
+
+[04-Sep-2025 17:20:11 America/Santiago] CLIENT -> SERVER: From: Sitio Web Paragon <info@paragon-chile.cl>
+
+[04-Sep-2025 17:20:11 America/Santiago] CLIENT -> SERVER: Reply-To: Prueba <hector.aburto@gmail.com>
+
+[04-Sep-2025 17:20:11 America/Santiago] CLIENT -> SERVER: Subject: Nuevo contacto desde el sitio web
+
+[04-Sep-2025 17:20:11 America/Santiago] CLIENT -> SERVER: Message-ID: <q3r19EOfHL8l0ExySBF9p2ChZxHBb2FVPbdJRduo@paragon-chile.cl>
+
+[04-Sep-2025 17:20:11 America/Santiago] CLIENT -> SERVER: X-Mailer: PHPMailer 6.10.0 (https://github.com/PHPMailer/PHPMailer)
+
+[04-Sep-2025 17:20:11 America/Santiago] CLIENT -> SERVER: MIME-Version: 1.0
+
+[04-Sep-2025 17:20:11 America/Santiago] CLIENT -> SERVER: Content-Type: multipart/alternative;
+
+[04-Sep-2025 17:20:11 America/Santiago] CLIENT -> SERVER:  boundary="b1=_q3r19EOfHL8l0ExySBF9p2ChZxHBb2FVPbdJRduo"
+
+[04-Sep-2025 17:20:11 America/Santiago] CLIENT -> SERVER: Content-Transfer-Encoding: 8bit
+
+[04-Sep-2025 17:20:11 America/Santiago] CLIENT -> SERVER: 
+
+[04-Sep-2025 17:20:11 America/Santiago] CLIENT -> SERVER: --b1=_q3r19EOfHL8l0ExySBF9p2ChZxHBb2FVPbdJRduo
+
+[04-Sep-2025 17:20:11 America/Santiago] CLIENT -> SERVER: Content-Type: text/plain; charset=iso-8859-1
+
+[04-Sep-2025 17:20:11 America/Santiago] CLIENT -> SERVER: Content-Transfer-Encoding: 8bit
+
+[04-Sep-2025 17:20:11 America/Santiago] CLIENT -> SERVER: 
+
+[04-Sep-2025 17:20:11 America/Santiago] CLIENT -> SERVER: Nuevo contacto desde el sitio web
+
+[04-Sep-2025 17:20:11 America/Santiago] CLIENT -> SERVER: Nombre: Prueba
+
+[04-Sep-2025 17:20:11 America/Santiago] CLIENT -> SERVER: Email: hector.aburto@gmail.com
+
+[04-Sep-2025 17:20:11 America/Santiago] CLIENT -> SERVER: Teléfono: +56975280566
+
+[04-Sep-2025 17:20:11 America/Santiago] CLIENT -> SERVER: 
+
+[04-Sep-2025 17:20:11 America/Santiago] CLIENT -> SERVER: Mensaje:
+
+[04-Sep-2025 17:20:11 America/Santiago] CLIENT -> SERVER: Prueba móvil 04 sep
+
+[04-Sep-2025 17:20:11 America/Santiago] CLIENT -> SERVER: 
+
+[04-Sep-2025 17:20:11 America/Santiago] CLIENT -> SERVER: --b1=_q3r19EOfHL8l0ExySBF9p2ChZxHBb2FVPbdJRduo
+
+[04-Sep-2025 17:20:11 America/Santiago] CLIENT -> SERVER: Content-Type: text/html; charset=iso-8859-1
+
+[04-Sep-2025 17:20:11 America/Santiago] CLIENT -> SERVER: Content-Transfer-Encoding: 8bit
+
+[04-Sep-2025 17:20:11 America/Santiago] CLIENT -> SERVER: 
+
+[04-Sep-2025 17:20:11 America/Santiago] CLIENT -> SERVER: 
+
+[04-Sep-2025 17:20:11 America/Santiago] CLIENT -> SERVER:   <h2>Nuevo contacto desde el sitio web</h2>
+
+[04-Sep-2025 17:20:11 America/Santiago] CLIENT -> SERVER:   <p><b>Nombre:</b> Prueba</p>
+
+[04-Sep-2025 17:20:11 America/Santiago] CLIENT -> SERVER:   <p><b>Email:</b> hector.aburto@gmail.com</p>
+
+[04-Sep-2025 17:20:11 America/Santiago] CLIENT -> SERVER:   <p><b>Teléfono:</b> +56975280566</p>
+
+[04-Sep-2025 17:20:11 America/Santiago] CLIENT -> SERVER:   <p><b>Mensaje:</b><br>Prueba m&oacute;vil 04 sep</p>
+
+[04-Sep-2025 17:20:11 America/Santiago] CLIENT -> SERVER: 
+
+[04-Sep-2025 17:20:11 America/Santiago] CLIENT -> SERVER: 
+
+[04-Sep-2025 17:20:11 America/Santiago] CLIENT -> SERVER: --b1=_q3r19EOfHL8l0ExySBF9p2ChZxHBb2FVPbdJRduo--
+
+[04-Sep-2025 17:20:11 America/Santiago] CLIENT -> SERVER: 
+
+[04-Sep-2025 17:20:11 America/Santiago] CLIENT -> SERVER: .
+
+[04-Sep-2025 17:20:16 America/Santiago] SERVER -> CLIENT: 250 OK id=1uuGRH-0000000DrS2-0LDd
+
+[04-Sep-2025 17:20:16 America/Santiago] CLIENT -> SERVER: QUIT
+
+[04-Sep-2025 17:20:16 America/Santiago] SERVER -> CLIENT: 221 pyme128.pymedns.net closing connection
+
+[04-Sep-2025 17:21:09 America/Santiago] SERVER -> CLIENT: 220-pyme128.pymedns.net ESMTP Exim 4.98.2 #2 Thu, 04 Sep 2025 16:21:09 -0400 
+220-We do not authorize the use of this system to transport unsolicited, 
+220 and/or bulk e-mail.
+
+[04-Sep-2025 17:21:09 America/Santiago] CLIENT -> SERVER: EHLO paragon-chile.cl
+
+[04-Sep-2025 17:21:09 America/Santiago] SERVER -> CLIENT: 250-pyme128.pymedns.net Hello paragon-chile.cl [186.64.114.95]
+250-SIZE 52428800
+250-LIMITS MAILMAX=1000 RCPTMAX=50000
+250-8BITMIME
+250-PIPELINING
+250-PIPECONNECT
+250-AUTH PLAIN LOGIN
+250 HELP
+
+[04-Sep-2025 17:21:09 America/Santiago] CLIENT -> SERVER: AUTH LOGIN
+
+[04-Sep-2025 17:21:09 America/Santiago] SERVER -> CLIENT: 334 VXNlcm5hbWU6
+
+[04-Sep-2025 17:21:09 America/Santiago] CLIENT -> SERVER: [credentials hidden]
+[04-Sep-2025 17:21:09 America/Santiago] SERVER -> CLIENT: 334 UGFzc3dvcmQ6
+
+[04-Sep-2025 17:21:09 America/Santiago] CLIENT -> SERVER: [credentials hidden]
+[04-Sep-2025 17:21:09 America/Santiago] SERVER -> CLIENT: 235 Authentication succeeded
+
+[04-Sep-2025 17:21:09 America/Santiago] CLIENT -> SERVER: MAIL FROM:<info@paragon-chile.cl>
+
+[04-Sep-2025 17:21:09 America/Santiago] SERVER -> CLIENT: 250 OK
+
+[04-Sep-2025 17:21:09 America/Santiago] CLIENT -> SERVER: RCPT TO:<info@paragon-chile.cl>
+
+[04-Sep-2025 17:21:09 America/Santiago] SERVER -> CLIENT: 250 Accepted
+
+[04-Sep-2025 17:21:09 America/Santiago] CLIENT -> SERVER: RCPT TO:<hector.aburto@gmail.com>
+
+[04-Sep-2025 17:21:09 America/Santiago] SERVER -> CLIENT: 250 Accepted
+
+[04-Sep-2025 17:21:09 America/Santiago] CLIENT -> SERVER: DATA
+
+[04-Sep-2025 17:21:09 America/Santiago] SERVER -> CLIENT: 354 Enter message, ending with "." on a line by itself
+
+[04-Sep-2025 17:21:09 America/Santiago] CLIENT -> SERVER: Date: Thu, 4 Sep 2025 17:21:09 -0300
+
+[04-Sep-2025 17:21:09 America/Santiago] CLIENT -> SERVER: To: info@paragon-chile.cl
+
+[04-Sep-2025 17:21:09 America/Santiago] CLIENT -> SERVER: From: Sitio Web Paragon <info@paragon-chile.cl>
+
+[04-Sep-2025 17:21:09 America/Santiago] CLIENT -> SERVER: Reply-To: prueba correo <hector.aburto@gmail.com>
+
+[04-Sep-2025 17:21:09 America/Santiago] CLIENT -> SERVER: Subject: Nuevo contacto desde el sitio web
+
+[04-Sep-2025 17:21:09 America/Santiago] CLIENT -> SERVER: Message-ID: <5yyugwCXbx0rWosauAYNVr61MTuSCxWQICpZiiY@paragon-chile.cl>
+
+[04-Sep-2025 17:21:09 America/Santiago] CLIENT -> SERVER: X-Mailer: PHPMailer 6.10.0 (https://github.com/PHPMailer/PHPMailer)
+
+[04-Sep-2025 17:21:09 America/Santiago] CLIENT -> SERVER: MIME-Version: 1.0
+
+[04-Sep-2025 17:21:09 America/Santiago] CLIENT -> SERVER: Content-Type: multipart/alternative;
+
+[04-Sep-2025 17:21:09 America/Santiago] CLIENT -> SERVER:  boundary="b1=_5yyugwCXbx0rWosauAYNVr61MTuSCxWQICpZiiY"
+
+[04-Sep-2025 17:21:09 America/Santiago] CLIENT -> SERVER: Content-Transfer-Encoding: 8bit
+
+[04-Sep-2025 17:21:09 America/Santiago] CLIENT -> SERVER: 
+
+[04-Sep-2025 17:21:09 America/Santiago] CLIENT -> SERVER: --b1=_5yyugwCXbx0rWosauAYNVr61MTuSCxWQICpZiiY
+
+[04-Sep-2025 17:21:09 America/Santiago] CLIENT -> SERVER: Content-Type: text/plain; charset=iso-8859-1
+
+[04-Sep-2025 17:21:09 America/Santiago] CLIENT -> SERVER: Content-Transfer-Encoding: 8bit
+
+[04-Sep-2025 17:21:09 America/Santiago] CLIENT -> SERVER: 
+
+[04-Sep-2025 17:21:09 America/Santiago] CLIENT -> SERVER: Nuevo contacto desde el sitio web
+
+[04-Sep-2025 17:21:09 America/Santiago] CLIENT -> SERVER: Nombre: prueba correo
+
+[04-Sep-2025 17:21:09 America/Santiago] CLIENT -> SERVER: Email: hector.aburto@gmail.com
+
+[04-Sep-2025 17:21:09 America/Santiago] CLIENT -> SERVER: Teléfono: +56975280566
+
+[04-Sep-2025 17:21:09 America/Santiago] CLIENT -> SERVER: 
+
+[04-Sep-2025 17:21:09 America/Santiago] CLIENT -> SERVER: Mensaje:
+
+[04-Sep-2025 17:21:09 America/Santiago] CLIENT -> SERVER: desde el computador
+
+[04-Sep-2025 17:21:09 America/Santiago] CLIENT -> SERVER: 
+
+[04-Sep-2025 17:21:09 America/Santiago] CLIENT -> SERVER: --b1=_5yyugwCXbx0rWosauAYNVr61MTuSCxWQICpZiiY
+
+[04-Sep-2025 17:21:09 America/Santiago] CLIENT -> SERVER: Content-Type: text/html; charset=iso-8859-1
+
+[04-Sep-2025 17:21:09 America/Santiago] CLIENT -> SERVER: Content-Transfer-Encoding: 8bit
+
+[04-Sep-2025 17:21:09 America/Santiago] CLIENT -> SERVER: 
+
+[04-Sep-2025 17:21:09 America/Santiago] CLIENT -> SERVER: 
+
+[04-Sep-2025 17:21:09 America/Santiago] CLIENT -> SERVER:   <h2>Nuevo contacto desde el sitio web</h2>
+
+[04-Sep-2025 17:21:09 America/Santiago] CLIENT -> SERVER:   <p><b>Nombre:</b> prueba correo</p>
+
+[04-Sep-2025 17:21:09 America/Santiago] CLIENT -> SERVER:   <p><b>Email:</b> hector.aburto@gmail.com</p>
+
+[04-Sep-2025 17:21:09 America/Santiago] CLIENT -> SERVER:   <p><b>Teléfono:</b> +56975280566</p>
+
+[04-Sep-2025 17:21:09 America/Santiago] CLIENT -> SERVER:   <p><b>Mensaje:</b><br>desde el computador</p>
+
+[04-Sep-2025 17:21:09 America/Santiago] CLIENT -> SERVER: 
+
+[04-Sep-2025 17:21:09 America/Santiago] CLIENT -> SERVER: 
+
+[04-Sep-2025 17:21:09 America/Santiago] CLIENT -> SERVER: --b1=_5yyugwCXbx0rWosauAYNVr61MTuSCxWQICpZiiY--
+
+[04-Sep-2025 17:21:09 America/Santiago] CLIENT -> SERVER: 
+
+[04-Sep-2025 17:21:09 America/Santiago] CLIENT -> SERVER: .
+
+[04-Sep-2025 17:21:14 America/Santiago] SERVER -> CLIENT: 250 OK id=1uuGSD-0000000Dreb-1TuJ
+
+[04-Sep-2025 17:21:14 America/Santiago] CLIENT -> SERVER: QUIT
+
+[04-Sep-2025 17:21:14 America/Santiago] SERVER -> CLIENT: 221 pyme128.pymedns.net closing connection
+
+[24-Sep-2025 23:36:39 America/Santiago] SERVER -> CLIENT: 220-pyme128.pymedns.net ESMTP Exim 4.98.2 #2 Wed, 24 Sep 2025 23:36:39 -0300 
+220-We do not authorize the use of this system to transport unsolicited, 
+220 and/or bulk e-mail.
+
+[24-Sep-2025 23:36:39 America/Santiago] CLIENT -> SERVER: EHLO paragon-chile.cl
+
+[24-Sep-2025 23:36:39 America/Santiago] SERVER -> CLIENT: 250-pyme128.pymedns.net Hello paragon-chile.cl [186.64.114.95]
+250-SIZE 52428800
+250-LIMITS MAILMAX=1000 RCPTMAX=50000
+250-8BITMIME
+250-PIPELINING
+250-PIPECONNECT
+250-AUTH PLAIN LOGIN
+250 HELP
+
+[24-Sep-2025 23:36:39 America/Santiago] CLIENT -> SERVER: AUTH LOGIN
+
+[24-Sep-2025 23:36:39 America/Santiago] SERVER -> CLIENT: 334 VXNlcm5hbWU6
+
+[24-Sep-2025 23:36:39 America/Santiago] CLIENT -> SERVER: [credentials hidden]
+[24-Sep-2025 23:36:39 America/Santiago] SERVER -> CLIENT: 334 UGFzc3dvcmQ6
+
+[24-Sep-2025 23:36:39 America/Santiago] CLIENT -> SERVER: [credentials hidden]
+[24-Sep-2025 23:36:39 America/Santiago] SERVER -> CLIENT: 235 Authentication succeeded
+
+[24-Sep-2025 23:36:39 America/Santiago] CLIENT -> SERVER: MAIL FROM:<info@paragon-chile.cl>
+
+[24-Sep-2025 23:36:39 America/Santiago] SERVER -> CLIENT: 250 OK
+
+[24-Sep-2025 23:36:39 America/Santiago] CLIENT -> SERVER: RCPT TO:<info@paragon-chile.cl>
+
+[24-Sep-2025 23:36:39 America/Santiago] SERVER -> CLIENT: 250 Accepted
+
+[24-Sep-2025 23:36:39 America/Santiago] CLIENT -> SERVER: RCPT TO:<hector.aburto@gmail.com>
+
+[24-Sep-2025 23:36:39 America/Santiago] SERVER -> CLIENT: 250 Accepted
+
+[24-Sep-2025 23:36:39 America/Santiago] CLIENT -> SERVER: DATA
+
+[24-Sep-2025 23:36:39 America/Santiago] SERVER -> CLIENT: 354 Enter message, ending with "." on a line by itself
+
+[24-Sep-2025 23:36:39 America/Santiago] CLIENT -> SERVER: Date: Wed, 24 Sep 2025 23:36:39 -0300
+
+[24-Sep-2025 23:36:39 America/Santiago] CLIENT -> SERVER: To: info@paragon-chile.cl
+
+[24-Sep-2025 23:36:39 America/Santiago] CLIENT -> SERVER: From: Sitio Web Paragon <info@paragon-chile.cl>
+
+[24-Sep-2025 23:36:39 America/Santiago] CLIENT -> SERVER: Reply-To: prueba 24 sept 25 <hector.aburto@gmail.com>
+
+[24-Sep-2025 23:36:39 America/Santiago] CLIENT -> SERVER: Subject: Nuevo contacto desde el sitio web
+
+[24-Sep-2025 23:36:39 America/Santiago] CLIENT -> SERVER: Message-ID: <IVDd0MqYVhoNkvu8JEirxT03ewTSrJhCCAWIG03RAbs@paragon-chile.cl>
+
+[24-Sep-2025 23:36:39 America/Santiago] CLIENT -> SERVER: X-Mailer: PHPMailer 6.10.0 (https://github.com/PHPMailer/PHPMailer)
+
+[24-Sep-2025 23:36:39 America/Santiago] CLIENT -> SERVER: MIME-Version: 1.0
+
+[24-Sep-2025 23:36:39 America/Santiago] CLIENT -> SERVER: Content-Type: multipart/alternative;
+
+[24-Sep-2025 23:36:39 America/Santiago] CLIENT -> SERVER:  boundary="b1=_IVDd0MqYVhoNkvu8JEirxT03ewTSrJhCCAWIG03RAbs"
+
+[24-Sep-2025 23:36:39 America/Santiago] CLIENT -> SERVER: Content-Transfer-Encoding: 8bit
+
+[24-Sep-2025 23:36:39 America/Santiago] CLIENT -> SERVER: 
+
+[24-Sep-2025 23:36:39 America/Santiago] CLIENT -> SERVER: --b1=_IVDd0MqYVhoNkvu8JEirxT03ewTSrJhCCAWIG03RAbs
+
+[24-Sep-2025 23:36:39 America/Santiago] CLIENT -> SERVER: Content-Type: text/plain; charset=iso-8859-1
+
+[24-Sep-2025 23:36:39 America/Santiago] CLIENT -> SERVER: Content-Transfer-Encoding: 8bit
+
+[24-Sep-2025 23:36:39 America/Santiago] CLIENT -> SERVER: 
+
+[24-Sep-2025 23:36:39 America/Santiago] CLIENT -> SERVER: Nuevo contacto desde el sitio web
+
+[24-Sep-2025 23:36:39 America/Santiago] CLIENT -> SERVER: Nombre: prueba 24 sept 25
+
+[24-Sep-2025 23:36:39 America/Santiago] CLIENT -> SERVER: Email: hector.aburto@gmail.com
+
+[24-Sep-2025 23:36:39 America/Santiago] CLIENT -> SERVER: Teléfono: +56975280566
+
+[24-Sep-2025 23:36:39 America/Santiago] CLIENT -> SERVER: 
+
+[24-Sep-2025 23:36:39 America/Santiago] CLIENT -> SERVER: Mensaje:
+
+[24-Sep-2025 23:36:39 America/Santiago] CLIENT -> SERVER: prueba
+
+[24-Sep-2025 23:36:39 America/Santiago] CLIENT -> SERVER: 
+
+[24-Sep-2025 23:36:39 America/Santiago] CLIENT -> SERVER: --b1=_IVDd0MqYVhoNkvu8JEirxT03ewTSrJhCCAWIG03RAbs
+
+[24-Sep-2025 23:36:39 America/Santiago] CLIENT -> SERVER: Content-Type: text/html; charset=iso-8859-1
+
+[24-Sep-2025 23:36:39 America/Santiago] CLIENT -> SERVER: Content-Transfer-Encoding: 8bit
+
+[24-Sep-2025 23:36:39 America/Santiago] CLIENT -> SERVER: 
+
+[24-Sep-2025 23:36:39 America/Santiago] CLIENT -> SERVER: 
+
+[24-Sep-2025 23:36:39 America/Santiago] CLIENT -> SERVER:   <h2>Nuevo contacto desde el sitio web</h2>
+
+[24-Sep-2025 23:36:39 America/Santiago] CLIENT -> SERVER:   <p><b>Nombre:</b> prueba 24 sept 25</p>
+
+[24-Sep-2025 23:36:39 America/Santiago] CLIENT -> SERVER:   <p><b>Email:</b> hector.aburto@gmail.com</p>
+
+[24-Sep-2025 23:36:39 America/Santiago] CLIENT -> SERVER:   <p><b>Teléfono:</b> +56975280566</p>
+
+[24-Sep-2025 23:36:39 America/Santiago] CLIENT -> SERVER:   <p><b>Mensaje:</b><br>prueba</p>
+
+[24-Sep-2025 23:36:39 America/Santiago] CLIENT -> SERVER: 
+
+[24-Sep-2025 23:36:39 America/Santiago] CLIENT -> SERVER: 
+
+[24-Sep-2025 23:36:39 America/Santiago] CLIENT -> SERVER: --b1=_IVDd0MqYVhoNkvu8JEirxT03ewTSrJhCCAWIG03RAbs--
+
+[24-Sep-2025 23:36:39 America/Santiago] CLIENT -> SERVER: 
+
+[24-Sep-2025 23:36:39 America/Santiago] CLIENT -> SERVER: .
+
+[24-Sep-2025 23:36:43 America/Santiago] SERVER -> CLIENT: 250 OK id=1v1bqZ-00000007jEJ-1iGS
+
+[24-Sep-2025 23:36:43 America/Santiago] CLIENT -> SERVER: QUIT
+
+[24-Sep-2025 23:36:43 America/Santiago] SERVER -> CLIENT: 221 pyme128.pymedns.net closing connection
+
